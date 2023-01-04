@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "master.css",
+	"sources": [
+		"../scss/master.scss"
+	],
+	"sourcesContent": [
+		""
+	],
+	"names": [],
+	"mappings": ""
+}
