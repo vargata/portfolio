@@ -92,12 +92,12 @@ body {
 
 /* line 35, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 .page_container .left_menu_container {
-  flex: 1 0 200px;
+  flex: 1 0 15%;
 }
 
 /* line 39, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 .page_container .content_container {
-  flex: 5 1 500px;
+  flex: 5 0 75%;
 }
 
 /*# sourceMappingURL=master.css.map */

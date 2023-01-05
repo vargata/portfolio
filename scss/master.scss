@@ -33,10 +33,10 @@ body {
 	border: 1px solid red;
 	
 	.left_menu_container{
-		flex: 1 0 200px;
+		flex: 1 0 15%;
 	}
 	
 	.content_container{
-		flex: 5 1 500px;
+		flex: 5 0 75%;
 	}
 }

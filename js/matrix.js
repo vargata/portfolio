@@ -1,16 +1,9 @@
 const canvas = document.getElementById('background');
 const bg = canvas.getContext('2d');
 
-var w = canvas.width = document.body.clientWidth;
-var h = canvas.height = document.body.clientHeight;
-var cols = Math.floor(w / 20) + 1;
-var ypos = Array(cols).fill(0);
-
-bg.fillStyle = '#000';
-bg.fillRect(0, 0, w, h);
-
 var MatrixFont = new FontFace("Matrix Code NFI", "url(../font/matrix code nfi.ttf)");
-MatrixFont.load();
+
+initwindow();
 
 bg.font = "15px MatrixFont";
 
@@ -31,7 +24,7 @@ function matrix() {
 	});
 }
 
-function resetwindow() {
+function initwindow() {
 	w = canvas.width = document.body.clientWidth;
 	h = canvas.height = document.body.clientHeight;
 	cols = Math.floor(w / 20) + 1;
@@ -39,8 +32,10 @@ function resetwindow() {
 
 	bg.fillStyle = '#000';
 	bg.fillRect(0, 0, w, h);
+
+	bg.font = "15px MatrixFont";
 }
 
 setInterval(matrix, 50);
 
-window.addEventListener("resize", resetwindow);
+window.addEventListener("resize", initwindow);
