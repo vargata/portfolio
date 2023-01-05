@@ -1,0 +1,42 @@
+@import 'leftmenu';
+@import 'content';
+
+@font-face {
+  font-family: "MatrixFont";
+  src: url('../font/matrix code nfi.ttf'),
+}
+
+body {
+	position: relative;
+	margin: 0;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	background-image: url("../img/matrix_bg.png");
+}
+
+.background{
+	box-sizing: border-box;
+	position: absolute;
+}
+
+.page_container{
+	box-sizing: border-box;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	border: 1px solid red;
+	
+	.left_menu_container{
+		flex: 1 0 200px;
+	}
+	
+	.content_container{
+		flex: 5 1 500px;
+	}
+}
