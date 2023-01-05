@@ -1,7 +1,7 @@
 /* line 1, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
 .left_menu_container {
   box-sizing: border-box;
-  height: 100vh;
+  height: 100%;
   overflow: hidden;
   border: 1px solid red;
 }
@@ -61,41 +61,47 @@
 }
 
 /* line 9, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+html {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 14, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 body {
   position: relative;
   margin: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
   background-image: url("../img/matrix_bg.png");
 }
 
-/* line 18, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 23, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 .background {
   box-sizing: border-box;
   position: absolute;
 }
 
-/* line 23, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 28, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 .page_container {
   box-sizing: border-box;
   position: absolute;
   top: 0px;
   left: 0px;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   border: 1px solid red;
 }
 
-/* line 35, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 40, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 .page_container .left_menu_container {
   flex: 1 0 15%;
 }
 
-/* line 39, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 44, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 .page_container .content_container {
   flex: 5 0 75%;
 }
