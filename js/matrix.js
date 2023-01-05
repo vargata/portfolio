@@ -9,7 +9,7 @@ var ypos = Array(cols).fill(0);
 bg.fillStyle = '#000';
 bg.fillRect(0, 0, w, h);
 
-var MatrixFont = new FontFace("Matrix Code NFI", "url(font/matrix code nfi.ttf)");
+var MatrixFont = new FontFace("Matrix Code NFI", "url(../font/matrix code nfi.ttf)");
 MatrixFont.load();
 
 bg.font = "15px MatrixFont";
