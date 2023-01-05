@@ -5,13 +5,11 @@ var MatrixFont = new FontFace("Matrix Code NFI", "url(../font/matrix code nfi.tt
 
 initwindow();
 
-bg.font = "15px MatrixFont";
-
 function matrix() {	
 	bg.fillStyle = '#0001';
 	bg.fillRect(0, 0, w, h);
 	
-	bg.fillStyle = '#0f0';
+	bg.fillStyle = '#060';
 	
 	ypos.forEach((y, ind) => {
 		var text = String.fromCharCode(Math.random() * 128);
