@@ -64,9 +64,10 @@
 html {
   width: 100%;
   height: 100%;
+  position: fixed;
 }
 
-/* line 14, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 15, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 body {
   position: relative;
   margin: 0;
@@ -76,13 +77,13 @@ body {
   background-image: url("../img/matrix_bg.png");
 }
 
-/* line 23, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 24, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 .background {
   box-sizing: border-box;
   position: absolute;
 }
 
-/* line 28, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 29, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 .page_container {
   box-sizing: border-box;
   position: absolute;
@@ -96,12 +97,12 @@ body {
   border: 1px solid red;
 }
 
-/* line 40, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 41, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 .page_container .left_menu_container {
   flex: 1 0 15%;
 }
 
-/* line 44, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 45, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 .page_container .content_container {
   flex: 5 0 75%;
 }
