@@ -1,58 +1,352 @@
 /* line 1, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
 .left_menu_container {
   box-sizing: border-box;
+  min-width: 100px;
   height: 100%;
   overflow: hidden;
-  border: 1px solid red;
 }
 
-/* line 1, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
-.content_container {
-  box-sizing: border-box;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  border: 1px solid red;
-}
-
-/* line 7, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
-.content_container .content_header {
-  width: 100%;
-  height: 30vh;
+/* line 8, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
+.left_menu_header {
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
-  border: 1px solid red;
-}
-
-/* line 19, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
-.content_container .content_header > * {
-  font-size: 5vw;
-  font-family: "MatrixFont";
+  height: 30vh;
+  font-size: 8vw;
   color: #0f0;
-  border: 1px solid red;
 }
 
-/* line 27, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+/* line 17, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
+.left_menu_header img {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* line 23, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
+.left_menu_content {
+  width: 100%;
+}
+
+/* line 26, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
+.left_menu_content > div {
+  width: 70%;
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  margin: 0px auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding-top: 30px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid rgba(0, 255, 0, 0.8);
+}
+
+/* line 38, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
+.left_menu_content a {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* line 42, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
+.left_menu_content a img {
+  width: 100%;
+  font-size: 1.5vw;
+  color: #0f0;
+  text-decoration: none;
+}
+
+/* line 50, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
+.left_menu_content a:hover {
+  box-shadow: 0px 0px 100px 20px #0f0, inset 0px 0px 100px 10px rgba(0, 255, 0, 0.4);
+}
+
+/* line 57, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
+.left_menu_footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 1vw;
+  width: 100%;
+  background-color: #000;
+}
+
+/* line 66, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
+.left_menu_footer a {
+  flex-grow: 0;
+  flex-shrink: 1;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 2vw;
+  padding: 1vw;
+  margin-top: 3vh;
+  border-radius: 50%;
+  text-decoration: none;
+  background-color: rgba(0, 255, 0, 0.1);
+}
+
+/* line 78, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
+.left_menu_footer a:hover {
+  background-color: rgba(0, 255, 0, 0.2);
+}
+
+/* line 83, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
+.left_menu_footer a:first-child {
+  color: #718dc8;
+}
+
+/* line 87, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
+.left_menu_footer a:last-child {
+  color: #ff0000;
+}
+
+/* line 3, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+.content_container {
+  display: block;
+  box-sizing: border-box;
+  min-width: 220px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+/* line 10, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+.content_container .content_header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100vh;
+  font-size: 3vw;
+  color: #0f0;
+}
+
+/* line 22, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+.content_container .content_header img {
+  width: 100%;
+  max-width: 600px;
+  background-color: black;
+}
+
+/* line 29, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 0.5vw;
   width: 100%;
   height: 80vh;
-  border: 1px solid red;
-}
-
-/* line 33, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
-.content_container .contact_form {
-  width: 100%;
-  height: 50vh;
-  border: 1px solid red;
 }
 
 /* line 39, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+.content_container .content .content1 {
+  position: relative;
+  width: 30%;
+  height: 35vh;
+  background-color: rgba(0, 255, 0, 0.2);
+  border-radius: 20px;
+  box-shadow: 0px 0px 100px 5px rgba(0, 255, 0, 0.8);
+}
+
+/* line 47, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+.content_container .content .content1 a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  transition: all 1s;
+  background: no-repeat center/cover url("../img/netmatters.png"), radial-gradient(rgba(0, 0, 0, 0.4) 60%, rgba(255, 255, 255, 0.6));
+  background-blend-mode: difference;
+}
+
+/* line 57, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+.content_container .content .content1:hover a {
+  z-index: 1;
+  position: absolute;
+  transform: scale(200%) translate(14vw, 12vh);
+}
+
+/* line 39, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+.content_container .content .content2 {
+  position: relative;
+  width: 30%;
+  height: 35vh;
+  background-color: rgba(0, 255, 0, 0.2);
+  border-radius: 20px;
+  box-shadow: 0px 0px 100px 5px rgba(0, 255, 0, 0.8);
+}
+
+/* line 47, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+.content_container .content .content2 a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  transition: all 1s;
+  background: no-repeat center/cover url("../img/soon.png"), radial-gradient(rgba(0, 0, 0, 0.4) 60%, rgba(255, 255, 255, 0.6));
+  background-blend-mode: difference;
+}
+
+/* line 57, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+.content_container .content .content2:hover a {
+  z-index: 1;
+  position: absolute;
+  transform: scale(200%) translate(0vw, 12vh);
+}
+
+/* line 39, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+.content_container .content .content3 {
+  position: relative;
+  width: 30%;
+  height: 35vh;
+  background-color: rgba(0, 255, 0, 0.2);
+  border-radius: 20px;
+  box-shadow: 0px 0px 100px 5px rgba(0, 255, 0, 0.8);
+}
+
+/* line 47, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+.content_container .content .content3 a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  transition: all 1s;
+  background: no-repeat center/cover url("../img/soon.png"), radial-gradient(rgba(0, 0, 0, 0.4) 60%, rgba(255, 255, 255, 0.6));
+  background-blend-mode: difference;
+}
+
+/* line 57, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+.content_container .content .content3:hover a {
+  z-index: 1;
+  position: absolute;
+  transform: scale(200%) translate(-14vw, 12vh);
+}
+
+/* line 39, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+.content_container .content .content4 {
+  position: relative;
+  width: 30%;
+  height: 35vh;
+  background-color: rgba(0, 255, 0, 0.2);
+  border-radius: 20px;
+  box-shadow: 0px 0px 100px 5px rgba(0, 255, 0, 0.8);
+}
+
+/* line 47, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+.content_container .content .content4 a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  transition: all 1s;
+  background: no-repeat center/cover url("../img/soon.png"), radial-gradient(rgba(0, 0, 0, 0.4) 60%, rgba(255, 255, 255, 0.6));
+  background-blend-mode: difference;
+}
+
+/* line 57, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+.content_container .content .content4:hover a {
+  z-index: 1;
+  position: absolute;
+  transform: scale(200%) translate(14vw, -12vh);
+}
+
+/* line 39, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+.content_container .content .content5 {
+  position: relative;
+  width: 30%;
+  height: 35vh;
+  background-color: rgba(0, 255, 0, 0.2);
+  border-radius: 20px;
+  box-shadow: 0px 0px 100px 5px rgba(0, 255, 0, 0.8);
+}
+
+/* line 47, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+.content_container .content .content5 a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  transition: all 1s;
+  background: no-repeat center/cover url("../img/soon.png"), radial-gradient(rgba(0, 0, 0, 0.4) 60%, rgba(255, 255, 255, 0.6));
+  background-blend-mode: difference;
+}
+
+/* line 57, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+.content_container .content .content5:hover a {
+  z-index: 1;
+  position: absolute;
+  transform: scale(200%) translate(0vw, -12vh);
+}
+
+/* line 39, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+.content_container .content .content6 {
+  position: relative;
+  width: 30%;
+  height: 35vh;
+  background-color: rgba(0, 255, 0, 0.2);
+  border-radius: 20px;
+  box-shadow: 0px 0px 100px 5px rgba(0, 255, 0, 0.8);
+}
+
+/* line 47, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+.content_container .content .content6 a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  transition: all 1s;
+  background: no-repeat center/cover url("../img/soon.png"), radial-gradient(rgba(0, 0, 0, 0.4) 60%, rgba(255, 255, 255, 0.6));
+  background-blend-mode: difference;
+}
+
+/* line 57, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+.content_container .content .content6:hover a {
+  z-index: 1;
+  position: absolute;
+  transform: scale(200%) translate(-14vw, -12vh);
+}
+
+/* line 84, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+.content_container .contact_form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50vh;
+  padding: 10vh 0px;
+  border-bottom: 1px solid #0f0;
+}
+
+/* line 93, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+.content_container .contact_form form > * {
+  display: block;
+  box-sizing: border-box;
+  border-radius: .5vw;
+}
+
+/* line 99, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+.content_container .contact_form input[type="text"],
+.content_container .contact_form input[type="email"] {
+  width: 40vw;
+  padding: 1vh 2vw;
+  line-height: 2.5vh;
+  margin-bottom: 1vh;
+}
+
+/* line 107, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+.content_container .contact_form textarea {
+  padding: 1vw;
+  width: 40vw;
+  height: 30vh;
+  resize: none;
+  margin-bottom: 1vh;
+}
+
+/* line 116, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .content_footer {
   width: 100%;
   height: 10vh;
-  border: 1px solid red;
 }
 
 @font-face {
@@ -60,30 +354,31 @@
   src: url("../font/matrix code nfi.ttf");
 }
 
-/* line 9, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 10, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 html {
   width: 100%;
   height: 100%;
   position: fixed;
 }
 
-/* line 15, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 16, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 body {
   position: relative;
   margin: 0;
   width: 100%;
   height: 100%;
   overflow: hidden;
+  background-color: #000;
   background-image: url("../img/matrix_bg.png");
 }
 
-/* line 24, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 26, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 .background {
   box-sizing: border-box;
   position: absolute;
 }
 
-/* line 29, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 31, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 .page_container {
   box-sizing: border-box;
   position: absolute;
@@ -94,15 +389,14 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  border: 1px solid red;
 }
 
-/* line 41, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 42, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 .page_container .left_menu_container {
   flex: 1 0 15%;
 }
 
-/* line 45, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 46, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 .page_container .content_container {
   flex: 5 0 75%;
 }

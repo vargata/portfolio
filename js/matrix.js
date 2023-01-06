@@ -31,7 +31,7 @@ function initwindow() {
 	bg.fillStyle = '#000';
 	bg.fillRect(0, 0, w, h);
 
-	bg.font = "15px MatrixFont";
+	bg.font = "18px MatrixFont";
 }
 
 setInterval(matrix, 50);

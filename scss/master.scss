@@ -1,5 +1,6 @@
 @import 'leftmenu';
 @import 'content';
+@import 'declarations';
 
 @font-face {
   font-family: "MatrixFont";
@@ -18,6 +19,7 @@ body {
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
+	background-color: #000;
 	background-image: url("../img/matrix_bg.png");
 }
 
@@ -36,7 +38,6 @@ body {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
-	border: 1px solid red;
 	
 	.left_menu_container{
 		flex: 1 0 15%;
