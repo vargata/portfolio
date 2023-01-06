@@ -44,22 +44,22 @@
 .left_menu_content a {
   width: 100%;
   border-radius: 10px;
-}
-
-/* line 42, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
-.left_menu_content a img {
-  width: 100%;
+  text-decoration: none;
   font-size: 1.5vw;
   color: #0f0;
-  text-decoration: none;
 }
 
-/* line 50, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
+/* line 45, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
+.left_menu_content a img {
+  width: 100%;
+}
+
+/* line 49, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
 .left_menu_content a:hover {
   box-shadow: 0px 0px 100px 20px #0f0, inset 0px 0px 100px 10px rgba(0, 255, 0, 0.4);
 }
 
-/* line 57, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
+/* line 56, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
 .left_menu_footer {
   display: flex;
   flex-direction: row;
@@ -70,12 +70,11 @@
   background-color: #000;
 }
 
-/* line 66, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
+/* line 65, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
 .left_menu_footer a {
   flex-grow: 0;
   flex-shrink: 1;
   display: inline-block;
-  text-decoration: none;
   font-size: 2vw;
   padding: 1vw;
   margin-top: 3vh;
@@ -84,17 +83,17 @@
   background-color: rgba(0, 255, 0, 0.1);
 }
 
-/* line 78, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
+/* line 76, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
 .left_menu_footer a:hover {
   background-color: rgba(0, 255, 0, 0.2);
 }
 
-/* line 83, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
+/* line 81, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
 .left_menu_footer a:first-child {
   color: #3b5998;
 }
 
-/* line 87, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
+/* line 85, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
 .left_menu_footer a:last-child {
   color: #ff0000;
 }

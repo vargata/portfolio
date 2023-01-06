@@ -38,13 +38,12 @@
 	a{
 		width: 100%;
 		border-radius: 10px;
+		text-decoration: none;
+		font-size: 1.5vw;
+		color: #0f0;
 		
 		img{
 			width: 100%;
-	
-			font-size: 1.5vw;
-			color: #0f0;
-			text-decoration: none;
 		}
 		
 		&:hover{
@@ -66,8 +65,7 @@
 	a{
 		flex-grow: 0;
 		flex-shrink: 1;
-		display: inline-block;		
-		text-decoration: none;
+		display: inline-block;
 		font-size: 2vw;
 		padding: 1vw;
 		margin-top: 3vh;
