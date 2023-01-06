@@ -51,23 +51,21 @@
 					height: 100%;
 					border-radius: 20px;
 					transition: all 1s;
-					background: no-repeat center/cover url(nth($portfolios, $i)), radial-gradient(rgba(0, 0, 0, .4) 60%, rgba(255, 255, 255, .6));
+					background: no-repeat center/cover url(nth($portfolios, $i)), radial-gradient(rgba(0, 0, 0, .4) 60%, rgba(255, 255, 255, .8));
 					background-blend-mode: difference;
 				}
 				
 				a{
-					display: none;
+					display: block;
+					visibility: hidden;
 					width: 100%;
 					height: 100%;
 					border-radius: 20px;
-					transition: all 1s;
-					background: no-repeat center/cover url(nth($portfolios, $i)), radial-gradient(rgba(0, 0, 0, .4) 60%, rgba(255, 255, 255, .6));
-					background-blend-mode: difference;
 				}
 				
 				&:hover span{
 					z-index: 1;
-					position: absolute;					
+					position: absolute;
 					
 					@if($i==1){
 						transform: scale(200%) translate(14vw, 12vh);
@@ -87,10 +85,6 @@
 					@if($i==6){
 						transform: scale(200%) translate(-14vw, -12vh);
 					}
-				}
-				
-				&:hover a{
-					display: block;
 				}
 			}
 		}
