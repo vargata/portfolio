@@ -374,6 +374,7 @@
 /* line 101, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .contact_form .contact_message {
   box-sizing: border-box;
+  padding: 1vw;
   width: 30vw;
   height: 60vh;
   border-radius: .5vw;
@@ -382,6 +383,19 @@
 }
 
 /* line 110, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+.content_container .contact_form .contact_message a {
+  color: #0f0;
+  text-decoration: none;
+}
+
+/* line 114, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+.content_container .contact_form .contact_message a:hover {
+  border-radius: 2px;
+  background-color: rgba(0, 255, 0, 0.2);
+  box-shadow: 0px 0px 15px 10px rgba(0, 255, 0, 0.2);
+}
+
+/* line 122, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .contact_form form > * {
   display: block;
   box-sizing: border-box;
@@ -391,22 +405,22 @@
   background-color: rgba(0, 255, 0, 0.2);
 }
 
-/* line 118, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+/* line 130, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .contact_form form > *::placeholder {
   color: rgba(0, 255, 0, 0.6);
 }
 
-/* line 122, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+/* line 134, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .contact_form form > *:focus::placeholder {
   color: transparent;
 }
 
-/* line 126, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+/* line 138, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .contact_form form > *:hover {
   background-color: rgba(0, 255, 0, 0.3);
 }
 
-/* line 131, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+/* line 143, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .contact_form input[type="text"],
 .content_container .contact_form input[type="email"] {
   width: 40vw;
@@ -418,7 +432,7 @@
   box-shadow: inset 0px 0px 10px 2px rgba(0, 255, 0, 0.8);
 }
 
-/* line 142, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+/* line 154, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .contact_form textarea {
   resize: none;
   padding: 1vw;
@@ -431,7 +445,7 @@
   box-shadow: inset 0px 0px 10px 2px rgba(0, 255, 0, 0.8);
 }
 
-/* line 154, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+/* line 166, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .contact_form input[type="submit"] {
   width: 10vw;
   padding: 1vh 1vw;
@@ -441,10 +455,25 @@
   box-shadow: inset 0px 0px 10px 2px rgba(0, 255, 0, 0.8);
 }
 
-/* line 164, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+/* line 176, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .content_footer {
   width: 100%;
   height: 10vh;
+}
+
+/* line 1, ../../../../xampp/htdocs/portfolio/scss/_scion.scss */
+.scion_container {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  font-size: 20px;
+  color: #0f0;
 }
 
 @font-face {
@@ -452,14 +481,14 @@
   src: url("../font/matrix code nfi.ttf");
 }
 
-/* line 10, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 11, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 html {
   width: 100%;
   height: 100%;
   position: fixed;
 }
 
-/* line 16, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 17, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 body {
   position: relative;
   margin: 0;
@@ -470,13 +499,13 @@ body {
   background-image: url("../img/matrix_bg.png");
 }
 
-/* line 26, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 27, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 .background {
   box-sizing: border-box;
   position: absolute;
 }
 
-/* line 31, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 32, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 .page_container {
   box-sizing: border-box;
   position: absolute;
@@ -489,12 +518,12 @@ body {
   flex-wrap: nowrap;
 }
 
-/* line 42, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 43, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 .page_container .left_menu_container {
   flex: 1 0 15%;
 }
 
-/* line 46, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 47, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 .page_container .content_container {
   flex: 5 0 75%;
 }
