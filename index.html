@@ -4,12 +4,151 @@
 		<title></title>
 		<link rel="stylesheet" href="css/master.css">
 		<script src="https://kit.fontawesome.com/a74776b808.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	</head>
 	<body>
 		<canvas id="background" ></canvas>
+
+		<div id="hidden_overlay"></div>
 		
+		<div id="about" class="hide">
+			<div>
+				<pre>Coming... Soon&trade;</pre>
+			</div>
+			<a href="javascript:hide('about')" title="Back to main page"><img src="img/close.png" alt="Close"/><div></div></a>	
+		</div>
+		<div id="code" class="hide">
+			<div>
+<pre>
+CSS coding example:
+
+<code class="languange-css">
+#about,
+#scs,
+#code{
+	position: absolute;
+	box-sizing: border-box;
+	z-index: 2;
+	transition: all 2s;
+	padding: 4vw;
+	color: #0f0;
+	overflow: hidden;
+	border-radius: 5vw;
+	background-color: black;
+	box-shadow: inset 0px 0px 10px 2px rgba(0, 255, 0, 0.8);
+	
+	div{
+		font-size: clamp(12px, 2vw, 18px);
+		height: 80%;
+		border-top-left-radius: 2vw;
+		overflow: auto;
+	}
+	
+	a{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		width: 20vw;
+		border-radius: 10px;
+		text-decoration: none;
+		font-size: 1.5vw;
+		color: #0f0;
+		
+		img{
+			width: 100%;
+		}
+		
+		&amp;:hover div{
+			position: absolute;
+			width:100%;
+			height: 0px;
+			box-shadow: 0px 0px 50px 10px #0f0;
+		}
+	}
+}
+</code>
+
+JavaScript coding example:
+
+<code class="language-javascript">
+const canvas = document.getElementById('background');
+const bg = canvas.getContext('2d');
+
+var MatrixFont = new FontFace("Matrix Code NFI", "url(../font/matrix code nfi.ttf)");
+
+initwindow();
+
+function matrix() {	
+	bg.fillStyle = '#0001';
+	bg.fillRect(0, 0, w, h);
+	
+	bg.fillStyle = '#040';
+	
+	ypos.forEach((y, ind) => {
+		var text = String.fromCharCode(Math.random() * 128);
+		var x = ind * 20;
+		bg.fillText(text, x, y);
+		if (y > 100 + Math.random() * 10000)
+			ypos[ind] = 0;
+		else
+			ypos[ind] = y + 20;
+	});
+}
+
+function initwindow() {
+	w = canvas.width = document.body.clientWidth;
+	h = canvas.height = document.body.clientHeight;
+	cols = Math.floor(w / 20) + 1;
+	ypos = Array(cols).fill(0);
+
+	bg.fillStyle = '#000';
+	bg.fillRect(0, 0, w, h);
+
+	bg.font = "18px MatrixFont";
+}
+
+setInterval(matrix, 50);
+
+window.addEventListener("resize", initwindow);
+</code>
+</pre>	
+			</div>
+			<a href="javascript:hide('code')" title="Back to main page"><img src="img/close.png" alt="Close"/><div></div></a>
+		</div>
+		<div id="scs" class="hide">
+			<div>
+				<h1>Introduction to Scion Coalition Scheme</h1>
+				<p>The Scion Coalition Scheme is an intensive, specially tailored training program run by Netmatters 
+					in order to give willing candidates the opportunity to enter the industry as web developers. 
+					Under the supervision of senior web developers, scions generally aim to complete training 
+					within six to nine months. The course is intensive and therefore the level of learning achieved 
+					is extensive in a short space of time.</p>
+
+				<h2>Treehouse</h2>
+				<p>Treehouse is an online learning community, featuring videos covering a number of topics 
+					from basic HTML to C# programming, iOS development, data analysis, and more. 
+					By completing courses users can earn points, allowing them to track their progress 
+					and see how much they?ve covered in certain areas.</p>
+				<p>Total Score</p>
+				<p>teamtreehouse.com/xxxxx</p>
+
+				<h2>About Netmatters</h2>
+<pre>Established in 2008
+Norfolk's leading technology company
+Winner of the Princess Royal Training Award
+Winner of EDP Skills of Tomorrow Award
+80+ staff, 2 locations across Norfolk
+Digital Marketing, Website &amp; Software development &amp; IT Support
+Broad spectrum of clients, working nationwide
+Operate to strict company values</pre>
+			</div>
+			<a href="javascript:hide('scs')" title="Back to main page"><img src="img/close.png" alt="Close"/><div></div></a>
+		</div>
+			
 		<div class="page_container">
 			<div class="left_menu_container">
 				<div class="left_menu_header">
@@ -17,12 +156,12 @@
 				</div>
 				<div class="left_menu_content">
 					<div>
-						<a href="about.html" title="READ ALL ABOUT ME"><img src="img/aboutme.png" alt="ABOUT ME" /></a>
-						<a href="#portfolio" title="TAKE A LOOK AT MY PORTFOLIO"><img src="img/portfolio.png" alt="PORTFOLIO" /></a>
-						<a href="codesnip.html" title="CHECK OUT CODING EXAMPLES FROM ME"><img src="img/examples.png" alt="CODING EXAMPLES" /></a>
-						<a href="scion.html" title="READ ABOUT THE SCION COALITION SCHEME"><img src="img/scs.png" alt="SCS SCHEME" /></a>
-						<a href="#contact" title="LEAVE ME A MESSAGE"><img src="img/contact.png" alt="CONTACT" /></a>
-						<a href="#top" title="BACK TO THE TOP"><img src="img/totop.png" alt="TO THE TOP" /></a>
+						<a href="javascript:show('about');" title="READ ALL ABOUT ME"><img src="img/aboutme.png" alt="ABOUT ME" /><div></div></a>
+						<a href="javascript:show('code');" title="CHECK OUT CODING EXAMPLES FROM ME"><img src="img/examples.png" alt="CODING EXAMPLES" /><div></div></a>
+						<a href="javascript:show('scs');" title="READ ABOUT THE SCION COALITION SCHEME"><img src="img/scs.png" alt="SCS SCHEME" /><div></div></a>
+						<a href="#portfolio" title="TAKE A LOOK AT MY PORTFOLIO"><img src="img/portfolio.png" alt="PORTFOLIO" /><div></div></a>
+						<a href="#contact" title="LEAVE ME A MESSAGE"><img src="img/contact.png" alt="CONTACT" /><div></div></a>
+						<a href="#top" title="BACK TO THE TOP"><img src="img/totop.png" alt="TO THE TOP" /><div></div></a>
 					</div>
 				</div>
 				<div class="left_menu_footer">
@@ -32,8 +171,9 @@
 			</div>
 			<div class="content_container">
 				<div id="top" class="content_header">
-						<img src="img/tamasvarga.png" alt="MY NAME IS TAMAS VARGA" />						
-						<img src="img/webdev.png" alt="I am a web developer" />
+					<img src="img/welcome.png" alt="Welcome" />
+					<img src="img/tamasvarga.png" alt="MY NAME IS TAMAS VARGA" />
+					<img src="img/webdev.png" alt="I am a web developer" />
 				</div>
 				<div id="portfolio" class="content">
 					<div class="content1"><span id="content1" ><a id="link1" href="https://vargata.github.io" title="NetMatters website clone" target="_blank"></a></span></div>
@@ -45,9 +185,9 @@
 				</div>
 				<div class="contact_form">
 					<div id="contact" class="contact_message">
-						<h1>Get In Touch</h1>
+						<img src="img/getintouch.png" alt="Get In Touch" />
 						<p>Please feel free to contact me by telephone or email and I will be sure to get back to you as soon as possible.</p>
-						<a href="tel:07868517309">+44 7868 517309</a>
+						<a href="tel:07868517309">+44 7868 517309</a><br />
 						<a href="mailto: vargatam@yahoo.com">vargatam@yahoo.com</a>
 					</div>
 					<form method="post" action="contact.php">
@@ -56,15 +196,18 @@
 						<input type="email" name="email" placeholder="E-Mail" required="required" />
 						<input type="text" name="subject" placeholder="Subject" required="required" />
 						<textarea name="message" placeholder="Message..." required="required"></textarea>
-						<input type="submit" value="Send message" name="submit" required="required"/>
+						<input type="submit" value="Submit" name="submit" required="required"/>
 					</form>
 				</div>
 				<div class="content_footer">
+					&copy; Copyright
 				</div>
 			</div>
 		</div>
 		
 		<script src="js/matrix.js"></script>
 		<script src="js/hoverscript.js"></script>
+		<script src="js/showpage.js"></script>
+		<script>hljs.highlightAll();</script>
 	</body>
 </html>

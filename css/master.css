@@ -35,13 +35,17 @@
   flex-direction: column;
   margin: 0px auto;
   background-color: rgba(0, 0, 0, 0.8);
-  padding-top: 30px;
-  padding-bottom: 50px;
+  padding-top: 5vh;
+  padding-bottom: 10vh;
   border-bottom: 1px solid rgba(0, 255, 0, 0.8);
 }
 
 /* line 38, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
 .left_menu_content a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
   width: 100%;
   border-radius: 10px;
   text-decoration: none;
@@ -49,17 +53,20 @@
   color: #0f0;
 }
 
-/* line 45, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
+/* line 49, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
 .left_menu_content a img {
   width: 100%;
 }
 
-/* line 49, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
-.left_menu_content a:hover {
-  box-shadow: 0px 0px 100px 20px #0f0, inset 0px 0px 100px 10px rgba(0, 255, 0, 0.4);
+/* line 53, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
+.left_menu_content a:hover div {
+  position: absolute;
+  width: 100%;
+  height: 0px;
+  box-shadow: 0px 0px 50px 10px #0f0;
 }
 
-/* line 56, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
+/* line 62, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
 .left_menu_footer {
   display: flex;
   flex-direction: row;
@@ -70,7 +77,7 @@
   background-color: #000;
 }
 
-/* line 65, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
+/* line 71, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
 .left_menu_footer a {
   flex-grow: 0;
   flex-shrink: 1;
@@ -83,17 +90,17 @@
   background-color: rgba(0, 255, 0, 0.1);
 }
 
-/* line 76, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
+/* line 82, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
 .left_menu_footer a:hover {
   background-color: rgba(0, 255, 0, 0.2);
 }
 
-/* line 81, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
+/* line 87, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
 .left_menu_footer a:first-child {
   color: #3b5998;
 }
 
-/* line 85, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
+/* line 91, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
 .left_menu_footer a:last-child {
   color: #ff0000;
 }
@@ -116,7 +123,7 @@
   align-items: center;
   box-sizing: border-box;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   font-size: 3vw;
   color: #0f0;
 }
@@ -136,7 +143,7 @@
   flex-wrap: wrap;
   gap: 0.5vw;
   width: 100%;
-  height: 80vh;
+  min-height: 80vh;
 }
 
 /* line 40, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
@@ -364,10 +371,10 @@
 /* line 93, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .contact_form {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   width: 100%;
-  height: 80vh;
+  min-height: 80vh;
   border-bottom: 1px solid #0f0;
 }
 
@@ -380,22 +387,30 @@
   border-radius: .5vw;
   color: #0f0;
   background-color: rgba(0, 255, 0, 0.2);
+  box-shadow: inset 0px 0px 10px 2px rgba(0, 255, 0, 0.8);
+  font-size: clamp(12px, 4vh, 18px);
 }
 
-/* line 110, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+/* line 112, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+.content_container .contact_form .contact_message img {
+  display: block;
+  width: 80%;
+}
+
+/* line 117, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .contact_form .contact_message a {
   color: #0f0;
   text-decoration: none;
 }
 
-/* line 114, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+/* line 121, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .contact_form .contact_message a:hover {
   border-radius: 2px;
   background-color: rgba(0, 255, 0, 0.2);
   box-shadow: 0px 0px 15px 10px rgba(0, 255, 0, 0.2);
 }
 
-/* line 122, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+/* line 129, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .contact_form form > * {
   display: block;
   box-sizing: border-box;
@@ -405,60 +420,62 @@
   background-color: rgba(0, 255, 0, 0.2);
 }
 
-/* line 130, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+/* line 137, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .contact_form form > *::placeholder {
   color: rgba(0, 255, 0, 0.6);
 }
 
-/* line 134, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+/* line 141, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .contact_form form > *:focus::placeholder {
   color: transparent;
 }
 
-/* line 138, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+/* line 145, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .contact_form form > *:hover {
   background-color: rgba(0, 255, 0, 0.3);
 }
 
-/* line 143, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+/* line 150, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .contact_form input[type="text"],
 .content_container .contact_form input[type="email"] {
   width: 40vw;
   padding: 1vh 2vw;
-  font-size: 2vh;
+  font-size: clamp(12px, 4vh, 18px);
   line-height: 2.5vh;
   margin-bottom: 1vh;
   border: 1px solid rgba(0, 255, 0, 0.8);
   box-shadow: inset 0px 0px 10px 2px rgba(0, 255, 0, 0.8);
 }
 
-/* line 154, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+/* line 161, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .contact_form textarea {
   resize: none;
   padding: 1vw;
   width: 40vw;
   height: 30vh;
-  font-size: 2vh;
+  font-size: clamp(12px, 4vh, 18px);
   line-height: 2.5vh;
   margin-bottom: 1vh;
   border: 1px solid rgba(0, 255, 0, 0.8);
   box-shadow: inset 0px 0px 10px 2px rgba(0, 255, 0, 0.8);
 }
 
-/* line 166, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+/* line 173, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .contact_form input[type="submit"] {
   width: 10vw;
   padding: 1vh 1vw;
-  font-size: 2vh;
+  font-size: clamp(12px, 4vh, 18px);
   line-height: 2.5vh;
   border: 1px solid rgba(0, 255, 0, 0.8);
   box-shadow: inset 0px 0px 10px 2px rgba(0, 255, 0, 0.8);
 }
 
-/* line 176, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+/* line 183, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .content_footer {
   width: 100%;
-  height: 10vh;
+  min-height: 10vh;
+  padding-top: 1vh;
+  color: #0f0;
 }
 
 /* line 1, ../../../../xampp/htdocs/portfolio/scss/_scion.scss */
@@ -476,19 +493,132 @@
   color: #0f0;
 }
 
+/* line 1, ../../../../xampp/htdocs/portfolio/scss/_hljs.scss */
+.hljs {
+  display: block !important;
+  overflow-x: auto !important;
+  padding: .5em !important;
+  color: #abb2bf !important;
+  background: #000 !important;
+  overflow-x: hidden !important;
+}
+
+/* line 10, ../../../../xampp/htdocs/portfolio/scss/_hljs.scss */
+.hljs-comment,
+.hljs-quote {
+  color: #5c6370 !important;
+  font-style: italic !important;
+}
+
+/* line 16, ../../../../xampp/htdocs/portfolio/scss/_hljs.scss */
+.hljs-doctag,
+.hljs-formula,
+.hljs-keyword {
+  color: #c678dd !important;
+}
+
+/* line 22, ../../../../xampp/htdocs/portfolio/scss/_hljs.scss */
+.hljs-deletion,
+.hljs-name,
+.hljs-section,
+.hljs-selector-tag,
+.hljs-subst {
+  color: #e06c75 !important;
+}
+
+/* line 30, ../../../../xampp/htdocs/portfolio/scss/_hljs.scss */
+.hljs-literal {
+  color: #56b6c2 !important;
+}
+
+/* line 34, ../../../../xampp/htdocs/portfolio/scss/_hljs.scss */
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta-string,
+.hljs-regexp,
+.hljs-string {
+  color: #98c379 !important;
+}
+
+/* line 42, ../../../../xampp/htdocs/portfolio/scss/_hljs.scss */
+.hljs-built_in,
+.hljs-class .hljs-title {
+  color: #e6c07b !important;
+}
+
+/* line 47, ../../../../xampp/htdocs/portfolio/scss/_hljs.scss */
+.hljs-attr,
+.hljs-number,
+.hljs-selector-attr,
+.hljs-selector-class,
+.hljs-selector-pseudo,
+.hljs-template-variable,
+.hljs-type,
+.hljs-variable {
+  color: #d19a66 !important;
+}
+
+/* line 58, ../../../../xampp/htdocs/portfolio/scss/_hljs.scss */
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-symbol,
+.hljs-title {
+  color: #61aeee !important;
+}
+
+/* line 67, ../../../../xampp/htdocs/portfolio/scss/_hljs.scss */
+.hljs-emphasis {
+  font-style: italic !important;
+}
+
+/* line 71, ../../../../xampp/htdocs/portfolio/scss/_hljs.scss */
+.hljs-strong {
+  font-weight: 700 !important;
+}
+
+/* line 75, ../../../../xampp/htdocs/portfolio/scss/_hljs.scss */
+.hljs-link {
+  text-decoration: underline !important;
+}
+
+/* line 1, ../../../../xampp/htdocs/portfolio/scss/_scrollbar.scss */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+/* line 6, ../../../../xampp/htdocs/portfolio/scss/_scrollbar.scss */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #0a0;
+}
+
+/* Handle */
+/* line 11, ../../../../xampp/htdocs/portfolio/scss/_scrollbar.scss */
+::-webkit-scrollbar-thumb {
+  background: #0a0;
+}
+
+/* Handle on hover */
+/* line 16, ../../../../xampp/htdocs/portfolio/scss/_scrollbar.scss */
+::-webkit-scrollbar-thumb:hover {
+  background: #0f0;
+}
+
 @font-face {
   font-family: "MatrixFont";
   src: url("../font/matrix code nfi.ttf");
 }
 
-/* line 11, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 13, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 html {
   width: 100%;
   height: 100%;
   position: fixed;
 }
 
-/* line 17, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 19, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 body {
   position: relative;
   margin: 0;
@@ -499,13 +629,102 @@ body {
   background-image: url("../img/matrix_bg.png");
 }
 
-/* line 27, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 29, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 .background {
   box-sizing: border-box;
   position: absolute;
 }
 
-/* line 32, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 34, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+#hidden_overlay {
+  position: absolute;
+  box-sizing: border-box;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(0, 255, 0, 0.1);
+  visibility: hidden;
+}
+
+/* line 46, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+#about,
+#scs,
+#code {
+  position: absolute;
+  box-sizing: border-box;
+  z-index: 2;
+  transition: all 2s;
+  padding: 4vw;
+  color: #0f0;
+  overflow: hidden;
+  border-radius: 5vw;
+  background-color: black;
+  box-shadow: inset 0px 0px 10px 2px rgba(0, 255, 0, 0.8);
+}
+
+/* line 60, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+#about div,
+#scs div,
+#code div {
+  font-size: clamp(12px, 2vw, 18px);
+  height: 80%;
+  border-top-left-radius: 2vw;
+  overflow: auto;
+}
+
+/* line 67, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+#about a,
+#scs a,
+#code a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 20vw;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 1.5vw;
+  color: #0f0;
+}
+
+/* line 78, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+#about a img,
+#scs a img,
+#code a img {
+  width: 100%;
+}
+
+/* line 82, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+#about a:hover div,
+#scs a:hover div,
+#code a:hover div {
+  position: absolute;
+  width: 100%;
+  height: 0px;
+  box-shadow: 0px 0px 50px 10px #0f0;
+}
+
+/* line 91, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+.hide {
+  visibility: hidden;
+  top: calc(50% - 2.5vh);
+  left: calc(50% - 2.5vw);
+  width: 5vw;
+  height: 5vh;
+}
+
+/* line 99, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+.show {
+  visibility: visible;
+  top: 5vh;
+  left: 5vw;
+  width: 90vw;
+  height: 90vh;
+}
+
+/* line 107, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 .page_container {
   box-sizing: border-box;
   position: absolute;
@@ -518,12 +737,12 @@ body {
   flex-wrap: nowrap;
 }
 
-/* line 43, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 118, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 .page_container .left_menu_container {
   flex: 1 0 15%;
 }
 
-/* line 47, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 122, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 .page_container .content_container {
   flex: 5 0 75%;
 }
