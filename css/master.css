@@ -720,8 +720,8 @@ body {
   visibility: visible;
   top: 5vh;
   left: 5vw;
-  width: 90vw;
-  height: 90vh;
+  width: 90%;
+  height: 90%;
 }
 
 /* line 107, ../../../../xampp/htdocs/portfolio/scss/master.scss */
