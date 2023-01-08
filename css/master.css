@@ -709,17 +709,17 @@ body {
 /* line 91, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 .hide {
   visibility: hidden;
-  top: calc(50% - 2.5vh);
-  left: calc(50% - 2.5vw);
-  width: 5vw;
-  height: 5vh;
+  top: 47.5%;
+  left: 47.5%;
+  width: 5%;
+  height: 5%;
 }
 
 /* line 99, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 .show {
   visibility: visible;
-  top: 5vh;
-  left: 5vw;
+  top: 5%;
+  left: 5%;
   width: 90%;
   height: 90%;
 }
