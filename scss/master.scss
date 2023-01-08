@@ -48,6 +48,8 @@ body {
 #code{
 	position: absolute;
 	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
 	z-index: 2;
 	transition: all 2s;
 	padding: 4vw;
@@ -73,13 +75,14 @@ body {
 	}
 	
 	a{
-		display: flex;
+		margin-top: auto;
+		display: inline-flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 		position: relative;
 		width: 20vw;
-		border-radius: 10px;
+		border-radius: 1vw;
 		text-decoration: none;
 		font-size: 1.5vw;
 		color: #0f0;
