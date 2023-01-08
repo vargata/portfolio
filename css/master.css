@@ -1,7 +1,7 @@
 /* line 1, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
 .left_menu_container {
   box-sizing: border-box;
-  min-width: 100px;
+  min-width: 150px;
   height: 100%;
   overflow: hidden;
 }
@@ -957,12 +957,12 @@ body {
 
 /* line 130, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 .page_container .left_menu_container {
-  flex: 1 0 15%;
+  flex: 1 0 0;
 }
 
 /* line 134, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 .page_container .content_container {
-  flex: 5 0 75%;
+  flex: 5 0 0;
 }
 
 /*# sourceMappingURL=master.css.map */
