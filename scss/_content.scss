@@ -108,6 +108,7 @@
 			background-color: rgba(0, 255, 0, 0.2);
 			box-shadow: inset 0px 0px 10px 2px rgba(0, 255, 0, 0.8);
 			font-size: clamp(12px, 4vh, 18px);
+			overflow-y: auto;
 			
 			img{
 				display: block;

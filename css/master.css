@@ -82,8 +82,8 @@
   flex-grow: 0;
   flex-shrink: 1;
   display: inline-block;
-  font-size: 2vw;
-  padding: 1vw;
+  font-size: 32px;
+  padding: 10px;
   margin-top: 3vh;
   border-radius: 50%;
   text-decoration: none;
@@ -389,28 +389,29 @@
   background-color: rgba(0, 255, 0, 0.2);
   box-shadow: inset 0px 0px 10px 2px rgba(0, 255, 0, 0.8);
   font-size: clamp(12px, 4vh, 18px);
+  overflow-y: auto;
 }
 
-/* line 112, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+/* line 113, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .contact_form .contact_message img {
   display: block;
   width: 80%;
 }
 
-/* line 117, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+/* line 118, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .contact_form .contact_message a {
   color: #0f0;
   text-decoration: none;
 }
 
-/* line 121, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+/* line 122, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .contact_form .contact_message a:hover {
   border-radius: 2px;
   background-color: rgba(0, 255, 0, 0.2);
   box-shadow: 0px 0px 15px 10px rgba(0, 255, 0, 0.2);
 }
 
-/* line 129, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+/* line 130, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .contact_form form > * {
   display: block;
   box-sizing: border-box;
@@ -420,22 +421,22 @@
   background-color: rgba(0, 255, 0, 0.2);
 }
 
-/* line 137, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+/* line 138, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .contact_form form > *::placeholder {
   color: rgba(0, 255, 0, 0.6);
 }
 
-/* line 141, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+/* line 142, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .contact_form form > *:focus::placeholder {
   color: transparent;
 }
 
-/* line 145, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+/* line 146, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .contact_form form > *:hover {
   background-color: rgba(0, 255, 0, 0.3);
 }
 
-/* line 150, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+/* line 151, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .contact_form input[type="text"],
 .content_container .contact_form input[type="email"] {
   width: 40vw;
@@ -447,7 +448,7 @@
   box-shadow: inset 0px 0px 10px 2px rgba(0, 255, 0, 0.8);
 }
 
-/* line 161, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+/* line 162, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .contact_form textarea {
   resize: none;
   padding: 1vw;
@@ -460,7 +461,7 @@
   box-shadow: inset 0px 0px 10px 2px rgba(0, 255, 0, 0.8);
 }
 
-/* line 173, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+/* line 174, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .contact_form input[type="submit"] {
   width: 10vw;
   padding: 1vh 1vw;
@@ -470,7 +471,7 @@
   box-shadow: inset 0px 0px 10px 2px rgba(0, 255, 0, 0.8);
 }
 
-/* line 183, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+/* line 184, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .content_footer {
   width: 100%;
   min-height: 10vh;
@@ -665,6 +666,20 @@ body {
 }
 
 /* line 60, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+#about h2,
+#scs h2,
+#code h2 {
+  margin: 0px;
+}
+
+/* line 64, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+#about p,
+#scs p,
+#code p {
+  margin: 0px;
+}
+
+/* line 68, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 #about div,
 #scs div,
 #code div {
@@ -674,11 +689,12 @@ body {
   overflow: auto;
 }
 
-/* line 67, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 75, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 #about a,
 #scs a,
 #code a {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -689,14 +705,14 @@ body {
   color: #0f0;
 }
 
-/* line 78, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 87, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 #about a img,
 #scs a img,
 #code a img {
   width: 100%;
 }
 
-/* line 82, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 91, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 #about a:hover div,
 #scs a:hover div,
 #code a:hover div {
@@ -706,7 +722,7 @@ body {
   box-shadow: 0px 0px 50px 10px #0f0;
 }
 
-/* line 91, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 100, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 .hide {
   visibility: hidden;
   top: 47.5%;
@@ -715,7 +731,7 @@ body {
   height: 5%;
 }
 
-/* line 99, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 108, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 .show {
   visibility: visible;
   top: 5%;
@@ -724,7 +740,7 @@ body {
   height: 90%;
 }
 
-/* line 107, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 116, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 .page_container {
   box-sizing: border-box;
   position: absolute;
@@ -737,12 +753,12 @@ body {
   flex-wrap: nowrap;
 }
 
-/* line 118, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 127, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 .page_container .left_menu_container {
   flex: 1 0 15%;
 }
 
-/* line 122, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 131, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 .page_container .content_container {
   flex: 5 0 75%;
 }
