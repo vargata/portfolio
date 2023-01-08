@@ -41,13 +41,16 @@
 			.content#{$i}{
 				position: relative;				
 				width: 60%;
+				height: 30vw;
+				
 				@media (min-width: 770px){
 					width: 45%;
+					height: 25vw;
 				}
 				@media (min-width: 1260px){
 					width: 30%;
+					height: 20vw;
 				}
-				height: 35vh;
 				background-color: rgba(0, 255, 0, 0.2);
 				border-radius: 20px;
 				box-shadow: 0px 0px 100px 5px rgba(0, 255, 0, .8);
