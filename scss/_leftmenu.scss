@@ -1,4 +1,8 @@
 .left_menu_container{
+	@media(max-width: 320px){
+		display: none;
+	}
+	
 	box-sizing: border-box;
 	min-width: 150px;
 	height: 100%;
