@@ -52,7 +52,7 @@ body {
 	flex-direction: column;
 	z-index: 2;
 	transition: all 2s;
-	padding: 4vw;
+	padding: 2vw;
 	color: #0f0;
 	overflow: hidden;
 	border-radius: 5vw;
@@ -67,8 +67,9 @@ body {
 		margin: 0px;
 	}
 	
-	div{
-		font-size: clamp(12px, 2vw, 18px);
+	&>div{
+		padding: 4vw;
+		font-size: clamp(12px, 2vw, 16px);
 		height: 80%;
 		border-top-left-radius: 2vw;
 		overflow: auto;

@@ -57,3 +57,12 @@ content6.addEventListener('transitionend', function() {
 		document.getElementById("link6").style.visibility = "hidden";
 		
 }, false );
+
+document.addEventListener('DOMContentLoaded', function(e) {
+	document.getElementById("link1").style.visibility = "hidden";
+	document.getElementById("link2").style.visibility = "hidden";
+	document.getElementById("link3").style.visibility = "hidden";
+	document.getElementById("link4").style.visibility = "hidden";
+	document.getElementById("link5").style.visibility = "hidden";
+	document.getElementById("link6").style.visibility = "hidden";
+});
