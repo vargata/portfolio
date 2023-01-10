@@ -147,22 +147,22 @@
 					@media (min-width: 1260px){
 						
 						@if($i==1){
-							transform: scale(200%) translate(14vw, 12vh);
+							transform: scale(180%) translate(14vw, 12vh);
 						}
 						@if($i==2){
-							transform: scale(200%) translate(0vw, 12vh);
+							transform: scale(180%) translate(0vw, 12vh);
 						}
 						@if($i==3){
-							transform: scale(200%) translate(-14vw, 12vh);
+							transform: scale(180%) translate(-14vw, 12vh);
 						}
 						@if($i==4){
-							transform: scale(200%) translate(14vw, -12vh);
+							transform: scale(180%) translate(14vw, -12vh);
 						}
 						@if($i==5){
-							transform: scale(200%) translate(0vw, -12vh);
+							transform: scale(180%) translate(0vw, -12vh);
 						}
 						@if($i==6){
-							transform: scale(200%) translate(-14vw, -12vh);
+							transform: scale(180%) translate(-14vw, -12vh);
 						}
 					}
 				}
@@ -224,6 +224,7 @@
 			display: block;
 			box-sizing: border-box;
 			border-radius: .5vw;
+			font-family: "Courier";
 			color: #0f0;
 			outline: none;
 			background-color: rgba(0, 255, 0, 0.2);
