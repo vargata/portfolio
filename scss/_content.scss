@@ -276,9 +276,43 @@
 	}
 	
 	.content_footer{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: flex-start;
 		width: 100%;
 		min-height: 10vh;
 		padding-top: 1vh;
 		color: #0f0;
+	}
+}
+
+.socialmedia_footer{
+	display: none;
+	
+	@media (max-width: 500px){
+		display: inline-flex;
+		margin-left: auto;
+	}
+	
+	flex-direction: row;
+	flex-wrap: nowrap;
+	gap: 1vw;
+	
+	a{
+		flex: 1 0 0;
+		display: block;
+		width: 10vw;
+		min-width: 24px;
+		
+		img{
+			min-width: 20px;
+			width: 8vw;
+			transition: all 1s;
+			
+			&:hover{
+				width: 10vw;
+			}
+		}
 	}
 }

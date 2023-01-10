@@ -1,7 +1,6 @@
 @import 'leftmenu';
 @import 'content';
 @import 'declarations';
-@import 'scion';
 @import 'hljs.scss';
 @import 'scrollbar';
 
@@ -14,6 +13,12 @@ html{
 	width: 100%;
 	height: 100%;
 	position: fixed;
+	font-family: "Courier";
+}
+
+pre{
+	font-family: "Courier";
+	tab-size: 4;
 }
 
 body {

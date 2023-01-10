@@ -1,4 +1,3 @@
-var MatrixFont = new FontFace("Matrix Code NFI", "url(../font/matrix code nfi.ttf)");
 var inputs = document.querySelectorAll('input');
 
 inputs.forEach((input) => {
@@ -16,12 +15,10 @@ var lasttext = null;
 
 function updateValue(e) {
 	if(charset.includes(e.data)){
-		e.target.style.fontFamily = "MatrixFont";
 		if(id !== null){		
 			clearInterval(id);
 			id = null;
 			e.target.value = lasttext.substring(0, lastloc) + lastchar + e.data;
-			e.target.style.fontFamily = "Arial";
 		}
 		id = setInterval(spinChar, 50);
 		var counter = 5;
@@ -36,7 +33,6 @@ function updateValue(e) {
 				clearInterval(id);
 				id = null;
 				e.target.value = e.target.value.substring(0, location) + e.data;
-				e.target.style.fontFamily = "Arial";
 			}
 		}
 	}

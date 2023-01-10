@@ -68,31 +68,23 @@
 	flex-direction: row;
 	justify-content: center;
 	flex-wrap: nowrap;
+	margin-top: 3vh;
 	gap: 1vw;
 	width: 100%;
 	background-color: #000;
 	
 	a{
-		flex-grow: 0;
-		flex-shrink: 1;
-		display: inline-block;
-		font-size: 2vw;
-		padding: 10px;
-		margin-top: 3vh;
-		border-radius: 50%;
-		text-decoration: none;
-		background-color: rgba(0, 255, 0, 0.1);
+		flex: 0 1 30%;
+		display: block;
+		text-align: center;
 		
-		&:hover{
-			background-color: rgba(0, 255, 0, 0.2);
+		img{
+			width: 90%;
+			transition: all 1s;
+			
+			&:hover{
+				width: 100%;
+			}
 		}
-	}		
-		
-	a:first-child{
-		color: #3b5998;
-	}
-	
-	a:last-child{
-		color: #ff0000;
 	}
 }
