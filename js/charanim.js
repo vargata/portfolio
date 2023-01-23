@@ -8,7 +8,7 @@ var textbox = document.querySelector('textarea');
 textbox.addEventListener('input', updateValue);
 
 var id = null;
-var charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234567890 @\'\"\&\\$+-*/=%#_(),.;:?!|{}<>[]^~";
+//const charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234567890 @\'\"\&\\$+-*/=%#_(),.;:?!|{}<>[]^~";
 var lastloc = null;
 var lastchar = null;
 var lasttext = null;

@@ -22,18 +22,12 @@ pre{
 }
 
 body {
-	position: relative;
 	margin: 0;
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
 	background-color: #000;
-	background-image: url("../img/matrix_bg.png");
-}
-
-.background{
-	box-sizing: border-box;
-	position: absolute;
+	//background-image: url("../img/matrix_bg.png");
 }
 
 #hidden_overlay{	
@@ -43,7 +37,7 @@ body {
 	left: 0px;
 	width: 100%;
 	height: 100%;
-	z-index: 1;
+	z-index: 2;
 	background-color: rgba(0, 255, 0, 0.1);
 	visibility: hidden;
 }
@@ -55,7 +49,7 @@ body {
 	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
-	z-index: 2;
+	z-index: 3;
 	transition: all 2s;
 	padding: 2vw;
 	color: #0f0;

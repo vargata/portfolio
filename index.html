@@ -10,7 +10,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	</head>
 	<body>
-		<canvas id="background" ></canvas>
 
 		<div id="hidden_overlay"></div>
 		
@@ -157,32 +156,27 @@ Operate to strict company values</pre>
 				</div>
 				<div class="left_menu_content">
 					<div>
-						<a href="about.html" onclick="show('about'); return false;" title="READ ALL ABOUT ME"><img src="img/aboutme.png" alt="ABOUT ME" /><div></div></a>
-						<a href="code.html" onclick="javascript:show('code'); return false;" title="CHECK OUT CODING EXAMPLES FROM ME"><img src="img/examples.png" alt="CODING EXAMPLES" /><div></div></a>
-						<a href="scs.html" onclick="javascript:show('scs'); return false;" title="READ ABOUT THE SCION COALITION SCHEME"><img src="img/scs.png" alt="SCS SCHEME" /><div></div></a>
-						<a href="#portfolio" title="TAKE A LOOK AT MY PORTFOLIO"><img src="img/portfolio.png" alt="PORTFOLIO" /><div></div></a>
-						<a href="#contact" title="LEAVE ME A MESSAGE"><img src="img/contact.png" alt="CONTACT" /><div></div></a>
-						<a href="#top" title="BACK TO THE TOP"><img src="img/totop.png" alt="TO THE TOP" /><div></div></a>
+						<a href="about.html" onclick="show('about'); return false;" title="READ ALL ABOUT ME">ABOUT&nbsp;ME<div></div></a>
+						<a href="code.html" onclick="show('code'); return false;" title="CHECK OUT CODING EXAMPLES FROM ME">EXAMPLES<div></div></a>
+						<a href="scs.html" onclick="show('scs'); return false;" title="READ ABOUT THE SCION COALITION SCHEME">SCS&nbsp;SCHEME<div></div></a>
+						<a href="#portfolio" title="TAKE A LOOK AT MY PORTFOLIO">PORTFOLIO<div></div></a>
+						<a href="#contact" title="LEAVE ME A MESSAGE">CONTACT<div></div></a>
+						<!-- <a href="#top" title="BACK TO THE TOP"><img src="img/totop.png" alt="TO THE TOP" /><div></div></a> -->
 					</div>
 				</div>
 				<div class="left_menu_footer">
-					<a href="https://www.facebook.com/vargata77" title="My personal facebook page" target="_blank"><img src="img/f_logo_RGB-Blue_58.png" /></a>
-					<a href="https://www.youtube.com/channel/UCZWUSLs4NT5tGBc5fIYplIA" title="My personal youtube channel" target="_blank"><img src="img/youtube_social_circle_red.png" /></a>
+					<!-- <a href="https://www.facebook.com/vargata77" title="My personal facebook page" target="_blank"><img src="img/f_logo_RGB-Blue_58.png" /></a> -->
+					<a href="https://github.com/vargata?tab=repositories" title="My github" target="_blank"><img src="img/github-mark.png" alt="g"/></a>
+					<a href="https://www.youtube.com/channel/UCZWUSLs4NT5tGBc5fIYplIA" title="My personal youtube channel" target="_blank"><img src="img/youtube_social_circle_red.png" alt="y"/></a>
 				</div>
 			</div>
 			<div class="content_container">
+				<canvas id="background" ></canvas>
 				<div id="top" class="content_header">
-					<img src="img/welcome.png" alt="Welcome" />
-					<img src="img/tamasvarga.png" alt="MY NAME IS TAMAS VARGA" />
-					<img src="img/webdev.png" alt="I am a web developer" />
-				</div>
-				<div class="hidden_menu_content">
 					<div>
-						<a href="about.html" onclick="show('about'); return false;" title="READ ALL ABOUT ME"><img src="img/aboutme.png" alt="ABOUT ME" /><div></div></a>
-						<a href="code.html" onclick="javascript:show('code'); return false;" title="CHECK OUT CODING EXAMPLES FROM ME"><img src="img/examples.png" alt="CODING EXAMPLES" /><div></div></a>
-						<a href="scs.html" onclick="javascript:show('scs'); return false;" title="READ ABOUT THE SCION COALITION SCHEME"><img src="img/scs.png" alt="SCS SCHEME" /><div></div></a>
-						<a href="#portfolio" title="TAKE A LOOK AT MY PORTFOLIO"><img src="img/portfolio.png" alt="PORTFOLIO" /><div></div></a>
-						<a href="#contact" title="LEAVE ME A MESSAGE"><img src="img/contact.png" alt="CONTACT" /><div></div></a>
+						<span class="titletext">Welcome&nbsp;to&nbsp;my&nbsp;portfolio</span>
+						<span class="titletext">My&nbsp;name&nbsp;is&nbsp;Tamas&nbsp;Varga</span>
+						<span class="titletext">I&nbsp;am&nbsp;a&nbsp;webdeveloper</span>
 					</div>
 				</div>
 				<div id="portfolio" class="content">
@@ -205,15 +199,16 @@ Operate to strict company values</pre>
 						<input type="text" name="lastname" placeholder="Last name" required="required" />
 						<input type="email" name="email" placeholder="E-Mail" required="required" />
 						<input type="text" name="subject" placeholder="Subject" required="required" />
-						<textarea name="message" placeholder="Message..." required="required"></textarea>
-						<input type="submit" value="Submit" name="submit"/>
+						<textarea id="msg" name="message" placeholder="Message..." required="required" maxlength="500"></textarea>
+						<input type="submit" value="Submit" name="submit"/><label id="charcount">0/500</label>
 					</form>
 				</div>
 				<div class="content_footer">
 					&copy; Copyright
 					<div class="socialmedia_footer">
-						<a href="https://www.facebook.com/vargata77" title="My personal facebook page" target="_blank"><img src="img/f_logo_RGB-Blue_58.png" /></a>
-						<a href="https://www.youtube.com/channel/UCZWUSLs4NT5tGBc5fIYplIA" title="My personal youtube channel" target="_blank"><img src="img/youtube_social_circle_red.png" /></a>
+						<a href="https://www.facebook.com/vargata77" title="My personal facebook page" target="_blank"><img src="img/f_logo_RGB-Blue_58.png" alt="f" /></a>
+						<a href="https://github.com/vargata?tab=repositories" title="My github" target="_blank"><img src="img/github-mark.png" alt="g"/></a>
+						<a href="https://www.youtube.com/channel/UCZWUSLs4NT5tGBc5fIYplIA" title="My personal youtube channel" target="_blank"><img src="img/youtube_social_circle_red.png" alt="y"/></a>
 					</div>
 				</div>
 			</div>
@@ -223,6 +218,8 @@ Operate to strict company values</pre>
 		<script src="js/hoverscript.js"></script>
 		<script src="js/showpage.js"></script>
 		<script src="js/charanim.js"></script>
+		<script src="js/titleanim.js"></script>
+		<script src="js/countchar.js"></script>
 		<script type="text/javascript">hljs.highlightAll();</script>
 	</body>
 </html>
