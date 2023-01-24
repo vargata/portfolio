@@ -74,22 +74,89 @@
 				
 				span{
 					display: block;
+					position: relative;
 					width: 100%;
 					height: 100%;
 					border-radius: 4vw;
 					transition: all 1s;
 					background: no-repeat center/cover url(nth($portfolios, $i)), radial-gradient(rgba(0, 0, 0, .4) 60%, rgba(255, 255, 255, .8));
 					background-blend-mode: difference;
+					cursor: pointer;
+				
+					a{
+						position: absolute;
+						text-align: center;
+						bottom: 2vh;
+						left: 5vw;
+						right: 5vw;
+						display: block;
+						height: 10%;
+						border-radius: 5px;
+						background-color: #000;
+						color: #0f0;
+						text-decoration: none;
+						
+						&:hover{
+							background-color: #111;
+						}
+					}
 				}
 				
-				a{
-					display: block;
-					visibility: visible;
-					width: 100%;
-					height: 100%;
-					border-radius: 20px;
-				}
+				/*&:hover span{
+					z-index: 1;
+					position: absolute;
+					transform: scale(160%);
+					
+					@media (min-width: 770px){
+						@if($i==1){
+							transform: scale(160%) translate(14vw, 12vh);
+						}
+						@if($i==2){
+							transform: scale(160%) translate(-14vw, 12vh);
+						}
+						@if($i==3){
+							transform: scale(160%) translate(14vw, 0vh);
+						}
+						@if($i==4){
+							transform: scale(160%) translate(-14vw, 0vh);
+						}
+						@if($i==5){
+							transform: scale(160%) translate(14vw, -12vh);
+						}
+						@if($i==6){
+							transform: scale(160%) translate(-14vw, -12vh);
+						}
+					}
+					
+					@media (min-width: 1260px){
+						
+						@if($i==1){
+							transform: scale(180%) translate(14vw, 12vh);
+						}
+						@if($i==2){
+							transform: scale(180%) translate(0vw, 12vh);
+						}
+						@if($i==3){
+							transform: scale(180%) translate(-14vw, 12vh);
+						}
+						@if($i==4){
+							transform: scale(180%) translate(14vw, -12vh);
+						}
+						@if($i==5){
+							transform: scale(180%) translate(0vw, -12vh);
+						}
+						@if($i==6){
+							transform: scale(180%) translate(-14vw, -12vh);
+						}
+					}
+				}*/
 			}
+		}
+	}
+	
+	.hiddenbutton{
+		a{
+			visibility: hidden;
 		}
 	}
 	

@@ -173,6 +173,54 @@
   background-color: rgba(0, 255, 0, 0.3);
   border-radius: 4vw;
   box-shadow: 0px 0px 50px 1px rgba(0, 255, 0, 0.8);
+  /*&:hover span{
+					z-index: 1;
+					position: absolute;
+					transform: scale(160%);
+					
+					@media (min-width: 770px){
+						@if($i==1){
+							transform: scale(160%) translate(14vw, 12vh);
+						}
+						@if($i==2){
+							transform: scale(160%) translate(-14vw, 12vh);
+						}
+						@if($i==3){
+							transform: scale(160%) translate(14vw, 0vh);
+						}
+						@if($i==4){
+							transform: scale(160%) translate(-14vw, 0vh);
+						}
+						@if($i==5){
+							transform: scale(160%) translate(14vw, -12vh);
+						}
+						@if($i==6){
+							transform: scale(160%) translate(-14vw, -12vh);
+						}
+					}
+					
+					@media (min-width: 1260px){
+						
+						@if($i==1){
+							transform: scale(180%) translate(14vw, 12vh);
+						}
+						@if($i==2){
+							transform: scale(180%) translate(0vw, 12vh);
+						}
+						@if($i==3){
+							transform: scale(180%) translate(-14vw, 12vh);
+						}
+						@if($i==4){
+							transform: scale(180%) translate(14vw, -12vh);
+						}
+						@if($i==5){
+							transform: scale(180%) translate(0vw, -12vh);
+						}
+						@if($i==6){
+							transform: scale(180%) translate(-14vw, -12vh);
+						}
+					}
+				}*/
 }
 
 @media (min-width: 770px) {
@@ -194,21 +242,34 @@
 /* line 75, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .content .content1 span {
   display: block;
+  position: relative;
   width: 100%;
   height: 100%;
   border-radius: 4vw;
   transition: all 1s;
   background: no-repeat center/cover url("../img/netmatters.png"), radial-gradient(rgba(0, 0, 0, 0.4) 60%, rgba(255, 255, 255, 0.8));
   background-blend-mode: difference;
+  cursor: pointer;
 }
 
-/* line 85, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
-.content_container .content .content1 a {
+/* line 86, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+.content_container .content .content1 span a {
+  position: absolute;
+  text-align: center;
+  bottom: 2vh;
+  left: 5vw;
+  right: 5vw;
   display: block;
-  visibility: visible;
-  width: 100%;
-  height: 100%;
-  border-radius: 20px;
+  height: 10%;
+  border-radius: 5px;
+  background-color: #000;
+  color: #0f0;
+  text-decoration: none;
+}
+
+/* line 99, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+.content_container .content .content1 span a:hover {
+  background-color: #111;
 }
 
 /* line 58, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
@@ -219,6 +280,54 @@
   background-color: rgba(0, 255, 0, 0.3);
   border-radius: 4vw;
   box-shadow: 0px 0px 50px 1px rgba(0, 255, 0, 0.8);
+  /*&:hover span{
+					z-index: 1;
+					position: absolute;
+					transform: scale(160%);
+					
+					@media (min-width: 770px){
+						@if($i==1){
+							transform: scale(160%) translate(14vw, 12vh);
+						}
+						@if($i==2){
+							transform: scale(160%) translate(-14vw, 12vh);
+						}
+						@if($i==3){
+							transform: scale(160%) translate(14vw, 0vh);
+						}
+						@if($i==4){
+							transform: scale(160%) translate(-14vw, 0vh);
+						}
+						@if($i==5){
+							transform: scale(160%) translate(14vw, -12vh);
+						}
+						@if($i==6){
+							transform: scale(160%) translate(-14vw, -12vh);
+						}
+					}
+					
+					@media (min-width: 1260px){
+						
+						@if($i==1){
+							transform: scale(180%) translate(14vw, 12vh);
+						}
+						@if($i==2){
+							transform: scale(180%) translate(0vw, 12vh);
+						}
+						@if($i==3){
+							transform: scale(180%) translate(-14vw, 12vh);
+						}
+						@if($i==4){
+							transform: scale(180%) translate(14vw, -12vh);
+						}
+						@if($i==5){
+							transform: scale(180%) translate(0vw, -12vh);
+						}
+						@if($i==6){
+							transform: scale(180%) translate(-14vw, -12vh);
+						}
+					}
+				}*/
 }
 
 @media (min-width: 770px) {
@@ -240,21 +349,34 @@
 /* line 75, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .content .content2 span {
   display: block;
+  position: relative;
   width: 100%;
   height: 100%;
   border-radius: 4vw;
   transition: all 1s;
   background: no-repeat center/cover url("../img/soon.png"), radial-gradient(rgba(0, 0, 0, 0.4) 60%, rgba(255, 255, 255, 0.8));
   background-blend-mode: difference;
+  cursor: pointer;
 }
 
-/* line 85, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
-.content_container .content .content2 a {
+/* line 86, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+.content_container .content .content2 span a {
+  position: absolute;
+  text-align: center;
+  bottom: 2vh;
+  left: 5vw;
+  right: 5vw;
   display: block;
-  visibility: visible;
-  width: 100%;
-  height: 100%;
-  border-radius: 20px;
+  height: 10%;
+  border-radius: 5px;
+  background-color: #000;
+  color: #0f0;
+  text-decoration: none;
+}
+
+/* line 99, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+.content_container .content .content2 span a:hover {
+  background-color: #111;
 }
 
 /* line 58, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
@@ -265,6 +387,54 @@
   background-color: rgba(0, 255, 0, 0.3);
   border-radius: 4vw;
   box-shadow: 0px 0px 50px 1px rgba(0, 255, 0, 0.8);
+  /*&:hover span{
+					z-index: 1;
+					position: absolute;
+					transform: scale(160%);
+					
+					@media (min-width: 770px){
+						@if($i==1){
+							transform: scale(160%) translate(14vw, 12vh);
+						}
+						@if($i==2){
+							transform: scale(160%) translate(-14vw, 12vh);
+						}
+						@if($i==3){
+							transform: scale(160%) translate(14vw, 0vh);
+						}
+						@if($i==4){
+							transform: scale(160%) translate(-14vw, 0vh);
+						}
+						@if($i==5){
+							transform: scale(160%) translate(14vw, -12vh);
+						}
+						@if($i==6){
+							transform: scale(160%) translate(-14vw, -12vh);
+						}
+					}
+					
+					@media (min-width: 1260px){
+						
+						@if($i==1){
+							transform: scale(180%) translate(14vw, 12vh);
+						}
+						@if($i==2){
+							transform: scale(180%) translate(0vw, 12vh);
+						}
+						@if($i==3){
+							transform: scale(180%) translate(-14vw, 12vh);
+						}
+						@if($i==4){
+							transform: scale(180%) translate(14vw, -12vh);
+						}
+						@if($i==5){
+							transform: scale(180%) translate(0vw, -12vh);
+						}
+						@if($i==6){
+							transform: scale(180%) translate(-14vw, -12vh);
+						}
+					}
+				}*/
 }
 
 @media (min-width: 770px) {
@@ -286,21 +456,34 @@
 /* line 75, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .content .content3 span {
   display: block;
+  position: relative;
   width: 100%;
   height: 100%;
   border-radius: 4vw;
   transition: all 1s;
   background: no-repeat center/cover url("../img/soon.png"), radial-gradient(rgba(0, 0, 0, 0.4) 60%, rgba(255, 255, 255, 0.8));
   background-blend-mode: difference;
+  cursor: pointer;
 }
 
-/* line 85, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
-.content_container .content .content3 a {
+/* line 86, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+.content_container .content .content3 span a {
+  position: absolute;
+  text-align: center;
+  bottom: 2vh;
+  left: 5vw;
+  right: 5vw;
   display: block;
-  visibility: visible;
-  width: 100%;
-  height: 100%;
-  border-radius: 20px;
+  height: 10%;
+  border-radius: 5px;
+  background-color: #000;
+  color: #0f0;
+  text-decoration: none;
+}
+
+/* line 99, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+.content_container .content .content3 span a:hover {
+  background-color: #111;
 }
 
 /* line 58, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
@@ -311,6 +494,54 @@
   background-color: rgba(0, 255, 0, 0.3);
   border-radius: 4vw;
   box-shadow: 0px 0px 50px 1px rgba(0, 255, 0, 0.8);
+  /*&:hover span{
+					z-index: 1;
+					position: absolute;
+					transform: scale(160%);
+					
+					@media (min-width: 770px){
+						@if($i==1){
+							transform: scale(160%) translate(14vw, 12vh);
+						}
+						@if($i==2){
+							transform: scale(160%) translate(-14vw, 12vh);
+						}
+						@if($i==3){
+							transform: scale(160%) translate(14vw, 0vh);
+						}
+						@if($i==4){
+							transform: scale(160%) translate(-14vw, 0vh);
+						}
+						@if($i==5){
+							transform: scale(160%) translate(14vw, -12vh);
+						}
+						@if($i==6){
+							transform: scale(160%) translate(-14vw, -12vh);
+						}
+					}
+					
+					@media (min-width: 1260px){
+						
+						@if($i==1){
+							transform: scale(180%) translate(14vw, 12vh);
+						}
+						@if($i==2){
+							transform: scale(180%) translate(0vw, 12vh);
+						}
+						@if($i==3){
+							transform: scale(180%) translate(-14vw, 12vh);
+						}
+						@if($i==4){
+							transform: scale(180%) translate(14vw, -12vh);
+						}
+						@if($i==5){
+							transform: scale(180%) translate(0vw, -12vh);
+						}
+						@if($i==6){
+							transform: scale(180%) translate(-14vw, -12vh);
+						}
+					}
+				}*/
 }
 
 @media (min-width: 770px) {
@@ -332,21 +563,34 @@
 /* line 75, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .content .content4 span {
   display: block;
+  position: relative;
   width: 100%;
   height: 100%;
   border-radius: 4vw;
   transition: all 1s;
   background: no-repeat center/cover url("../img/soon.png"), radial-gradient(rgba(0, 0, 0, 0.4) 60%, rgba(255, 255, 255, 0.8));
   background-blend-mode: difference;
+  cursor: pointer;
 }
 
-/* line 85, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
-.content_container .content .content4 a {
+/* line 86, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+.content_container .content .content4 span a {
+  position: absolute;
+  text-align: center;
+  bottom: 2vh;
+  left: 5vw;
+  right: 5vw;
   display: block;
-  visibility: visible;
-  width: 100%;
-  height: 100%;
-  border-radius: 20px;
+  height: 10%;
+  border-radius: 5px;
+  background-color: #000;
+  color: #0f0;
+  text-decoration: none;
+}
+
+/* line 99, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+.content_container .content .content4 span a:hover {
+  background-color: #111;
 }
 
 /* line 58, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
@@ -357,6 +601,54 @@
   background-color: rgba(0, 255, 0, 0.3);
   border-radius: 4vw;
   box-shadow: 0px 0px 50px 1px rgba(0, 255, 0, 0.8);
+  /*&:hover span{
+					z-index: 1;
+					position: absolute;
+					transform: scale(160%);
+					
+					@media (min-width: 770px){
+						@if($i==1){
+							transform: scale(160%) translate(14vw, 12vh);
+						}
+						@if($i==2){
+							transform: scale(160%) translate(-14vw, 12vh);
+						}
+						@if($i==3){
+							transform: scale(160%) translate(14vw, 0vh);
+						}
+						@if($i==4){
+							transform: scale(160%) translate(-14vw, 0vh);
+						}
+						@if($i==5){
+							transform: scale(160%) translate(14vw, -12vh);
+						}
+						@if($i==6){
+							transform: scale(160%) translate(-14vw, -12vh);
+						}
+					}
+					
+					@media (min-width: 1260px){
+						
+						@if($i==1){
+							transform: scale(180%) translate(14vw, 12vh);
+						}
+						@if($i==2){
+							transform: scale(180%) translate(0vw, 12vh);
+						}
+						@if($i==3){
+							transform: scale(180%) translate(-14vw, 12vh);
+						}
+						@if($i==4){
+							transform: scale(180%) translate(14vw, -12vh);
+						}
+						@if($i==5){
+							transform: scale(180%) translate(0vw, -12vh);
+						}
+						@if($i==6){
+							transform: scale(180%) translate(-14vw, -12vh);
+						}
+					}
+				}*/
 }
 
 @media (min-width: 770px) {
@@ -378,21 +670,34 @@
 /* line 75, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .content .content5 span {
   display: block;
+  position: relative;
   width: 100%;
   height: 100%;
   border-radius: 4vw;
   transition: all 1s;
   background: no-repeat center/cover url("../img/soon.png"), radial-gradient(rgba(0, 0, 0, 0.4) 60%, rgba(255, 255, 255, 0.8));
   background-blend-mode: difference;
+  cursor: pointer;
 }
 
-/* line 85, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
-.content_container .content .content5 a {
+/* line 86, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+.content_container .content .content5 span a {
+  position: absolute;
+  text-align: center;
+  bottom: 2vh;
+  left: 5vw;
+  right: 5vw;
   display: block;
-  visibility: visible;
-  width: 100%;
-  height: 100%;
-  border-radius: 20px;
+  height: 10%;
+  border-radius: 5px;
+  background-color: #000;
+  color: #0f0;
+  text-decoration: none;
+}
+
+/* line 99, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+.content_container .content .content5 span a:hover {
+  background-color: #111;
 }
 
 /* line 58, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
@@ -403,6 +708,54 @@
   background-color: rgba(0, 255, 0, 0.3);
   border-radius: 4vw;
   box-shadow: 0px 0px 50px 1px rgba(0, 255, 0, 0.8);
+  /*&:hover span{
+					z-index: 1;
+					position: absolute;
+					transform: scale(160%);
+					
+					@media (min-width: 770px){
+						@if($i==1){
+							transform: scale(160%) translate(14vw, 12vh);
+						}
+						@if($i==2){
+							transform: scale(160%) translate(-14vw, 12vh);
+						}
+						@if($i==3){
+							transform: scale(160%) translate(14vw, 0vh);
+						}
+						@if($i==4){
+							transform: scale(160%) translate(-14vw, 0vh);
+						}
+						@if($i==5){
+							transform: scale(160%) translate(14vw, -12vh);
+						}
+						@if($i==6){
+							transform: scale(160%) translate(-14vw, -12vh);
+						}
+					}
+					
+					@media (min-width: 1260px){
+						
+						@if($i==1){
+							transform: scale(180%) translate(14vw, 12vh);
+						}
+						@if($i==2){
+							transform: scale(180%) translate(0vw, 12vh);
+						}
+						@if($i==3){
+							transform: scale(180%) translate(-14vw, 12vh);
+						}
+						@if($i==4){
+							transform: scale(180%) translate(14vw, -12vh);
+						}
+						@if($i==5){
+							transform: scale(180%) translate(0vw, -12vh);
+						}
+						@if($i==6){
+							transform: scale(180%) translate(-14vw, -12vh);
+						}
+					}
+				}*/
 }
 
 @media (min-width: 770px) {
@@ -424,24 +777,42 @@
 /* line 75, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .content .content6 span {
   display: block;
+  position: relative;
   width: 100%;
   height: 100%;
   border-radius: 4vw;
   transition: all 1s;
   background: no-repeat center/cover url("../img/soon.png"), radial-gradient(rgba(0, 0, 0, 0.4) 60%, rgba(255, 255, 255, 0.8));
   background-blend-mode: difference;
+  cursor: pointer;
 }
 
-/* line 85, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
-.content_container .content .content6 a {
+/* line 86, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+.content_container .content .content6 span a {
+  position: absolute;
+  text-align: center;
+  bottom: 2vh;
+  left: 5vw;
+  right: 5vw;
   display: block;
-  visibility: visible;
-  width: 100%;
-  height: 100%;
-  border-radius: 20px;
+  height: 10%;
+  border-radius: 5px;
+  background-color: #000;
+  color: #0f0;
+  text-decoration: none;
 }
 
-/* line 96, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+/* line 99, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+.content_container .content .content6 span a:hover {
+  background-color: #111;
+}
+
+/* line 158, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+.content_container .hiddenbutton a {
+  visibility: hidden;
+}
+
+/* line 163, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .contact_form {
   display: flex;
   flex-direction: row;
@@ -457,19 +828,19 @@
 }
 
 @media (max-width: 770px) {
-  /* line 96, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+  /* line 163, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
   .content_container .contact_form {
     flex-direction: column;
   }
 }
 
-/* line 112, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+/* line 179, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .contact_form > * {
   flex: 1 1 0;
   width: 100%;
 }
 
-/* line 117, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+/* line 184, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .contact_form .contact_message {
   box-sizing: border-box;
   padding: 2vw;
@@ -484,26 +855,26 @@
   cursor: default;
 }
 
-/* line 130, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+/* line 197, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .contact_form .contact_message img {
   display: block;
   width: 80%;
 }
 
-/* line 135, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+/* line 202, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .contact_form .contact_message a {
   color: #0f0;
   text-decoration: none;
 }
 
-/* line 139, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+/* line 206, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .contact_form .contact_message a:hover {
   border-radius: 2px;
   background-color: rgba(0, 255, 0, 0.2);
   box-shadow: 0px 0px 15px 10px rgba(0, 255, 0, 0.2);
 }
 
-/* line 147, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+/* line 214, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .contact_form form > * {
   box-sizing: border-box;
   display: block;
@@ -515,22 +886,22 @@
   background-color: rgba(0, 255, 0, 0.1);
 }
 
-/* line 157, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+/* line 224, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .contact_form form > *::placeholder {
   color: rgba(0, 255, 0, 0.6);
 }
 
-/* line 161, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+/* line 228, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .contact_form form > *:focus::placeholder {
   color: transparent;
 }
 
-/* line 165, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+/* line 232, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .contact_form form > *:hover {
   background-color: rgba(0, 255, 0, 0.2);
 }
 
-/* line 170, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+/* line 237, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .contact_form input[type="text"],
 .content_container .contact_form input[type="email"] {
   padding: 1vh 2vw;
@@ -542,7 +913,7 @@
   box-shadow: inset 0px 0px 5px 2px rgba(0, 255, 0, 0.8);
 }
 
-/* line 181, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+/* line 248, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .contact_form textarea {
   resize: none;
   padding: 2vh 2vw;
@@ -555,7 +926,7 @@
   box-shadow: inset 0px 0px 5px 2px rgba(0, 255, 0, 0.8);
 }
 
-/* line 193, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+/* line 260, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .contact_form input[type="submit"] {
   width: 40%;
   display: inline-block;
@@ -566,12 +937,12 @@
   box-shadow: inset 0px 0px 5px 2px rgba(0, 255, 0, 0.8);
 }
 
-/* line 203, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+/* line 270, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .contact_form label {
   float: right;
 }
 
-/* line 208, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+/* line 275, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .content_footer {
   display: flex;
   flex-direction: row;
@@ -584,7 +955,7 @@
   color: #0f0;
 }
 
-/* line 219, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+/* line 286, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .content_footer .socialmedia_footer {
   display: none;
   flex-direction: row;
@@ -593,20 +964,20 @@
 }
 
 @media (max-width: 500px) {
-  /* line 219, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+  /* line 286, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
   .content_container .content_footer .socialmedia_footer {
     display: inline-flex;
     margin-left: auto;
   }
 }
 
-/* line 232, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+/* line 299, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .content_footer .socialmedia_footer a:nth-child(2) img {
   background-color: rgba(0, 255, 0, 0.7);
   border-radius: 45%;
 }
 
-/* line 238, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+/* line 305, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .content_footer .socialmedia_footer a {
   flex: 1 0 0;
   display: block;
@@ -614,14 +985,14 @@
   min-width: 24px;
 }
 
-/* line 244, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+/* line 311, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .content_footer .socialmedia_footer a img {
   min-width: 20px;
   width: 8vw;
   transition: all 1s;
 }
 
-/* line 249, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+/* line 316, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .content_footer .socialmedia_footer a img:hover {
   min-width: 24px;
   width: 10vw;
