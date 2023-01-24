@@ -22,6 +22,7 @@
 		box-sizing: border-box;
 		width: 100%;
 		min-height: 100vh;
+		border-radius: 3vw;
 			
 		& > div{
 			display: flex;
@@ -37,7 +38,7 @@
 				color: #0f0;
 				font-weight: 800;
 				line-height: clamp(22px, 6vw, 72px);
-				font-size: clamp(14px, 4vw, 52px);
+				font-size: clamp(16px, 4vw, 52px);
 				background-color: rgba(0, 0, 0, 0.8);
 				cursor: default;
 			}
@@ -58,7 +59,7 @@
 			.content#{$i}{
 				position: relative;				
 				width: 60%;
-				height: 25vw;
+				height: 30vw;
 				
 				@media (min-width: 770px){
 					width: 45%;
@@ -90,11 +91,12 @@
 						left: 5vw;
 						right: 5vw;
 						display: block;
-						height: 10%;
+						height: 18px;
 						border-radius: 5px;
 						background-color: #000;
 						color: #0f0;
 						text-decoration: none;
+						font-size: clamp(14px, 2vw, 18px);
 						
 						&:hover{
 							background-color: #111;
@@ -190,7 +192,7 @@
 			color: #0f0;
 			background-color: rgba(0, 255, 0, 0.1);
 			box-shadow: inset 0px 0px 10px 2px rgba(0, 255, 0, 0.8);
-			font-size: clamp(12px, 4vh, 18px);
+			font-size: clamp(16px, 4vw, 18px);
 			overflow-y: auto;
 			cursor: default;
 			
@@ -238,7 +240,7 @@
 		input[type="email"]{
 			padding: 1vh 2vw;
 			width: 100%;
-			font-size: clamp(12px, 4vh, 18px);
+			font-size: clamp(14px, 4vw, 18px);
 			line-height: 2.5vh;
 			margin-bottom: 1vh;
 			border: 1px solid rgba(0, 255, 0, 0.8);
@@ -250,7 +252,7 @@
 			padding: 2vh 2vw;
 			width: 100%;
 			height: 30vh;
-			font-size: clamp(12px, 4vh, 18px);
+			font-size: clamp(14px, 4vw, 18px);
 			line-height: 2.5vh;
 			margin-bottom: 1vh;
 			border: 1px solid rgba(0, 255, 0, 0.8);
@@ -261,7 +263,7 @@
 			width:40%;
 			display: inline-block;
 			padding: 1vh 1vw;
-			font-size: clamp(10px, 4vh, 18px);
+			font-size: clamp(14px, 4vw, 18px);
 			line-height: 2.5vh;
 			border: 1px solid rgba(0, 255, 0, 0.8);
 			box-shadow: inset 0px 0px 5px 2px rgba(0, 255, 0, 0.8);
