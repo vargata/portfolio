@@ -89,55 +89,6 @@
 					height: 100%;
 					border-radius: 20px;
 				}
-				
-				&:hover span{
-					z-index: 1;
-					position: absolute;
-					transform: scale(160%);
-					
-					@media (min-width: 770px){
-						@if($i==1){
-							transform: scale(160%) translate(14vw, 12vh);
-						}
-						@if($i==2){
-							transform: scale(160%) translate(-14vw, 12vh);
-						}
-						@if($i==3){
-							transform: scale(160%) translate(14vw, 0vh);
-						}
-						@if($i==4){
-							transform: scale(160%) translate(-14vw, 0vh);
-						}
-						@if($i==5){
-							transform: scale(160%) translate(14vw, -12vh);
-						}
-						@if($i==6){
-							transform: scale(160%) translate(-14vw, -12vh);
-						}
-					}
-					
-					@media (min-width: 1260px){
-						
-						@if($i==1){
-							transform: scale(180%) translate(14vw, 12vh);
-						}
-						@if($i==2){
-							transform: scale(180%) translate(0vw, 12vh);
-						}
-						@if($i==3){
-							transform: scale(180%) translate(-14vw, 12vh);
-						}
-						@if($i==4){
-							transform: scale(180%) translate(14vw, -12vh);
-						}
-						@if($i==5){
-							transform: scale(180%) translate(0vw, -12vh);
-						}
-						@if($i==6){
-							transform: scale(180%) translate(-14vw, -12vh);
-						}
-					}
-				}
 			}
 		}
 	}
