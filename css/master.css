@@ -756,28 +756,30 @@
 /* line 1, ../../../../xampp/htdocs/portfolio/scss/_hljs.scss */
 .hljs {
   display: block !important;
-  overflow-x: auto !important;
+  overflow: auto !important;
   padding: .5em !important;
   color: #abb2bf !important;
-  background: #000 !important;
-  overflow-x: hidden !important;
+  background: #222 !important;
+  box-sizing: border-box !important;
+  border-radius: 15px;
+  tab-size: 4;
 }
 
-/* line 10, ../../../../xampp/htdocs/portfolio/scss/_hljs.scss */
+/* line 12, ../../../../xampp/htdocs/portfolio/scss/_hljs.scss */
 .hljs-comment,
 .hljs-quote {
   color: #5c6370 !important;
   font-style: italic !important;
 }
 
-/* line 16, ../../../../xampp/htdocs/portfolio/scss/_hljs.scss */
+/* line 18, ../../../../xampp/htdocs/portfolio/scss/_hljs.scss */
 .hljs-doctag,
 .hljs-formula,
 .hljs-keyword {
   color: #c678dd !important;
 }
 
-/* line 22, ../../../../xampp/htdocs/portfolio/scss/_hljs.scss */
+/* line 24, ../../../../xampp/htdocs/portfolio/scss/_hljs.scss */
 .hljs-deletion,
 .hljs-name,
 .hljs-section,
@@ -786,12 +788,12 @@
   color: #e06c75 !important;
 }
 
-/* line 30, ../../../../xampp/htdocs/portfolio/scss/_hljs.scss */
+/* line 32, ../../../../xampp/htdocs/portfolio/scss/_hljs.scss */
 .hljs-literal {
   color: #56b6c2 !important;
 }
 
-/* line 34, ../../../../xampp/htdocs/portfolio/scss/_hljs.scss */
+/* line 36, ../../../../xampp/htdocs/portfolio/scss/_hljs.scss */
 .hljs-addition,
 .hljs-attribute,
 .hljs-meta-string,
@@ -800,13 +802,13 @@
   color: #98c379 !important;
 }
 
-/* line 42, ../../../../xampp/htdocs/portfolio/scss/_hljs.scss */
+/* line 44, ../../../../xampp/htdocs/portfolio/scss/_hljs.scss */
 .hljs-built_in,
 .hljs-class .hljs-title {
   color: #e6c07b !important;
 }
 
-/* line 47, ../../../../xampp/htdocs/portfolio/scss/_hljs.scss */
+/* line 49, ../../../../xampp/htdocs/portfolio/scss/_hljs.scss */
 .hljs-attr,
 .hljs-number,
 .hljs-selector-attr,
@@ -818,7 +820,7 @@
   color: #d19a66 !important;
 }
 
-/* line 58, ../../../../xampp/htdocs/portfolio/scss/_hljs.scss */
+/* line 60, ../../../../xampp/htdocs/portfolio/scss/_hljs.scss */
 .hljs-bullet,
 .hljs-link,
 .hljs-meta,
@@ -828,17 +830,17 @@
   color: #61aeee !important;
 }
 
-/* line 67, ../../../../xampp/htdocs/portfolio/scss/_hljs.scss */
+/* line 69, ../../../../xampp/htdocs/portfolio/scss/_hljs.scss */
 .hljs-emphasis {
   font-style: italic !important;
 }
 
-/* line 71, ../../../../xampp/htdocs/portfolio/scss/_hljs.scss */
+/* line 73, ../../../../xampp/htdocs/portfolio/scss/_hljs.scss */
 .hljs-strong {
   font-weight: 700 !important;
 }
 
-/* line 75, ../../../../xampp/htdocs/portfolio/scss/_hljs.scss */
+/* line 77, ../../../../xampp/htdocs/portfolio/scss/_hljs.scss */
 .hljs-link {
   text-decoration: underline !important;
 }
@@ -872,6 +874,15 @@
 }
 
 /* line 12, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-text-fill-color: #0f0;
+  -webkit-background-clip: text;
+}
+
+/* line 20, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 html {
   width: 100%;
   height: 100%;
@@ -879,13 +890,7 @@ html {
   font-family: "Courier";
 }
 
-/* line 19, ../../../../xampp/htdocs/portfolio/scss/master.scss */
-pre {
-  font-family: "Courier";
-  tab-size: 4;
-}
-
-/* line 24, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 27, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 body {
   margin: 0;
   width: 100%;
@@ -894,7 +899,7 @@ body {
   background-color: #000;
 }
 
-/* line 33, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 36, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 #hidden_overlay {
   position: absolute;
   box-sizing: border-box;
@@ -907,7 +912,7 @@ body {
   visibility: hidden;
 }
 
-/* line 45, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 48, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 #about,
 #scs,
 #code {
@@ -925,21 +930,21 @@ body {
   box-shadow: inset 0px 0px 10px 2px rgba(0, 255, 0, 0.8);
 }
 
-/* line 61, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 64, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 #about h2,
 #scs h2,
 #code h2 {
   margin: 0px;
 }
 
-/* line 65, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 68, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 #about p,
 #scs p,
 #code p {
   margin: 0px;
 }
 
-/* line 69, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 72, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 #about > div,
 #scs > div,
 #code > div {
@@ -948,16 +953,25 @@ body {
   height: 80%;
   border-top-left-radius: 2vw;
   overflow: auto;
+  font-weight: 600;
 }
 
-/* line 77, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 80, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+#about > div pre,
+#scs > div pre,
+#code > div pre {
+  font-family: "Courier";
+  tab-size: 4;
+}
+
+/* line 86, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 #about > a,
 #scs > a,
 #code > a {
   width: 20vw;
 }
 
-/* line 81, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 90, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 #about a,
 #scs a,
 #code a {
@@ -973,14 +987,14 @@ body {
   color: #0f0;
 }
 
-/* line 93, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 102, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 #about a img,
 #scs a img,
 #code a img {
   width: 100%;
 }
 
-/* line 97, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 106, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 #about a > div,
 #scs a > div,
 #code a > div {
@@ -990,14 +1004,14 @@ body {
   box-shadow: 0px 0px 50px 10px #0f0;
 }
 
-/* line 104, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 113, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 #about a:hover div,
 #scs a:hover div,
 #code a:hover div {
   box-shadow: 0px 0px 50px 15px #0f0;
 }
 
-/* line 110, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 119, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 .hide {
   visibility: hidden;
   top: 47.5%;
@@ -1006,7 +1020,7 @@ body {
   height: 5%;
 }
 
-/* line 118, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 127, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 .show {
   visibility: visible;
   top: 5%;
@@ -1015,7 +1029,7 @@ body {
   height: 90%;
 }
 
-/* line 126, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 135, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 .page_container {
   box-sizing: border-box;
   position: absolute;
@@ -1028,12 +1042,12 @@ body {
   flex-wrap: nowrap;
 }
 
-/* line 137, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 146, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 .page_container .left_menu_container {
   flex: 1 0 0;
 }
 
-/* line 141, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 150, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 .page_container .content_container {
   flex: 5 0 0;
 }

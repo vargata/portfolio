@@ -21,10 +21,14 @@
 		</div>
 		<div id="code" class="hide">
 			<div>
-<pre>
-CSS coding example:
+CSS coding example to style this very popup window,
+positioning it above the rest of the page elements,
+setting up transition delay and with a little trick, creating
+the hover effect. instead of adding the hover shadow to
+the link, that would not match the background, i create a
+0px thick div to add the shadow which this way will be uniform:
 
-<code class="languange-css">
+<pre><code class="languange-css">
 #about,
 #scs,
 #code{
@@ -69,50 +73,58 @@ CSS coding example:
 		}
 	}
 }
-</code>
+</code></pre>
 
-JavaScript coding example:
+This javascript code is responsible for the animation of the welcome text
+first replacing each line with a random binary code, then advancing through
+each line character by character, replacing each characters with a random
+member of the below declared character set, then after 5 iterations it swithes
+to the original character to reveal the message:
 
-<code class="language-javascript">
-const canvas = document.getElementById('background');
-const bg = canvas.getContext('2d');
+<pre><code class="language-javascript">
+const titles = document.querySelectorAll('.titletext');
+const charset =
+		"ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+		+"abcdefghijklmnopqrstuvwxyz"
+		+"01234567890"
+		+" @\'\"\&amp;\\$+-*/=%#_(),.;:?!|{}&lt;&gt;[]^~";
 
-var MatrixFont = new FontFace("Matrix Code NFI", "url(../font/matrix code nfi.ttf)");
-
-initwindow();
-
-function matrix() {	
-	bg.fillStyle = '#0001';
-	bg.fillRect(0, 0, w, h);
+titles.forEach( (item) => {
+	const originalText = item.innerText;
+	for( i = 0; i &lt; item.innerText.length; i++){
+		item.innerText = item.innerText.substring(0, i)
+		+ (Math.floor(Math.random() * 2))
+		+ item.innerText.substring(i+1, item.innerText.length);
+	}
 	
-	bg.fillStyle = '#040';
+	let textIndex = 0;
+	setTimeout(spinText, 10);
 	
-	ypos.forEach((y, ind) => {
-		var text = String.fromCharCode(Math.random() * 128);
-		var x = ind * 20;
-		bg.fillText(text, x, y);
-		if (y > 100 + Math.random() * 10000)
-			ypos[ind] = 0;
-		else
-			ypos[ind] = y + 20;
-	});
-}
-
-function initwindow() {
-	w = canvas.width = document.body.clientWidth;
-	h = canvas.height = document.body.clientHeight;
-	cols = Math.floor(w / 20) + 1;
-	ypos = Array(cols).fill(0);
-
-	bg.fillStyle = '#000';
-	bg.fillRect(0, 0, w, h);
-
-	bg.font = "18px MatrixFont";
-}
-
-setInterval(matrix, 50);
-
-window.addEventListener("resize", initwindow);
+	function spinText(){
+		let charIndex = 0;
+		setTimeout(spinChar,10);
+		
+		function spinChar() {
+			item.innerText = item.innerText.substring(0, textIndex)
+			+ charset.charAt(Math.random() * charset.length - 1)
+			+ item.innerText.substring(textIndex + 1, item.innerText.length);
+			
+			if(charIndex &lt; 5) {
+				charIndex++;
+				setTimeout(spinChar, 10);
+			} else {
+				item.innerText = item.innerText.substring(0, textIndex) 
+				+ originalText.charAt(textIndex) 
+				+ item.innerText.substring(textIndex + 1, item.innerText.length);
+				
+				if(textIndex &lt; originalText.length - 1){
+					textIndex++;
+					setTimeout(spinText, 10);
+				}
+			}
+		}
+	};
+})
 </code>
 </pre>	
 			</div>
@@ -133,7 +145,7 @@ is extensive in a short space of time.</p>
 from basic HTML to C# programming, iOS development, data analysis, and more. 
 By completing courses users can earn points, allowing them to track their progress 
 and see how much they?ve covered in certain areas.</p>
-<p>Total Score 3,718</p>
+<p>Total Score 6,142</p>
 <a href="https://teamtreehouse.com/profiles/tamasvarga2" target="_blank" title="My Treehouse profile">My Treehouse profile<div></div></a>
 
 <h2>About Netmatters</h2>
@@ -180,7 +192,7 @@ Operate to strict company values</pre>
 					</div>
 				</div>
 				<div id="portfolio" class="content">
-					<div class="content1"><span id="content1" ><a id="link1" href="https://vargata.github.io" title="NetMatters website clone" target="_blank"></a></span></div>
+					<div class="content1"><span id="content1"><a id="link1" href="https://vargata.github.io" title="NetMatters website clone" target="_blank"></a></span></div>
 					<div class="content2"><span id="content2"><a id="link2" href="#" title="Coming Soon" target="_blank"></a></span></div>
 					<div class="content3"><span id="content3"><a id="link3" href="#" title="Coming Soon" target="_blank"></a></span></div>
 					<div class="content4"><span id="content4"><a id="link4" href="#" title="Coming Soon" target="_blank"></a></span></div>
