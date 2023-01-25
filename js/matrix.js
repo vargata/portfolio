@@ -9,7 +9,7 @@ function matrix() {
 	bg.fillStyle = '#0001';
 	bg.fillRect(0, 0, w, h);
 	
-	bg.fillStyle = '#060';
+	bg.fillStyle = '#0a0';
 	
 	ypos.forEach((y, ind) => {
 		var text = String.fromCharCode(Math.random() * 128);

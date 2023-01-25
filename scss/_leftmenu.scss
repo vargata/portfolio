@@ -1,14 +1,15 @@
-.left_menu_container{
+.leftmenu_container{
+	
+	box-sizing: border-box;
+	width: 200px;
+	overflow: hidden;
+
 	@media(max-width: 500px){
 		display: none;
 	}
-	
-	box-sizing: border-box;
-	min-width: 200px;
-	overflow: hidden;
 }
 
-.left_menu_header{
+.leftmenu_header{
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -23,7 +24,7 @@
 	}
 }
 
-.left_menu_content{
+.leftmenu_content{
 	width: 100%;
 	
 	&>div{
@@ -58,7 +59,7 @@
 	}
 }
 
-.left_menu_footer{
+.leftmenu_footer{
 	display: flex;
 	flex-direction: row;
 	justify-content: center;

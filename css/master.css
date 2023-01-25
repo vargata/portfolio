@@ -1,19 +1,19 @@
 /* line 1, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
-.left_menu_container {
+.leftmenu_container {
   box-sizing: border-box;
-  min-width: 200px;
+  width: 200px;
   overflow: hidden;
 }
 
 @media (max-width: 500px) {
   /* line 1, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
-  .left_menu_container {
+  .leftmenu_container {
     display: none;
   }
 }
 
-/* line 11, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
-.left_menu_header {
+/* line 12, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
+.leftmenu_header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,19 +22,19 @@
   color: #0f0;
 }
 
-/* line 20, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
-.left_menu_header img {
+/* line 21, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
+.leftmenu_header img {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* line 26, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
-.left_menu_content {
+/* line 27, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
+.leftmenu_content {
   width: 100%;
 }
 
-/* line 29, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
-.left_menu_content > div {
+/* line 30, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
+.leftmenu_content > div {
   width: 70%;
   display: flex;
   gap: 5px;
@@ -46,8 +46,8 @@
   border-bottom: 1px solid rgba(0, 255, 0, 0.8);
 }
 
-/* line 41, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
-.left_menu_content a {
+/* line 42, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
+.leftmenu_content a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,16 +59,16 @@
   color: #0f0;
 }
 
-/* line 52, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
-.left_menu_content a:hover div {
+/* line 53, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
+.leftmenu_content a:hover div {
   position: absolute;
   width: 100%;
   height: 0px;
   box-shadow: 0px 0px 3vh .5vh #0f0;
 }
 
-/* line 61, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
-.left_menu_footer {
+/* line 62, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
+.leftmenu_footer {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -79,27 +79,27 @@
   background-color: #000;
 }
 
-/* line 72, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
-.left_menu_footer a:first-child img {
+/* line 73, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
+.leftmenu_footer a:first-child img {
   background-color: rgba(0, 255, 0, 0.7);
   border-radius: 45%;
 }
 
-/* line 78, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
-.left_menu_footer a {
+/* line 79, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
+.leftmenu_footer a {
   flex: 0 1 30%;
   display: block;
   text-align: center;
 }
 
-/* line 83, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
-.left_menu_footer a img {
+/* line 84, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
+.leftmenu_footer a img {
   width: 90%;
   transition: all 1s;
 }
 
-/* line 87, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
-.left_menu_footer a img:hover {
+/* line 88, ../../../../xampp/htdocs/portfolio/scss/_leftmenu.scss */
+.leftmenu_footer a img:hover {
   width: 100%;
 }
 
@@ -1151,7 +1151,7 @@ body {
   background-color: #000;
 }
 
-/* line 36, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 35, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 #hidden_overlay {
   position: absolute;
   box-sizing: border-box;
@@ -1164,7 +1164,38 @@ body {
   visibility: hidden;
 }
 
-/* line 48, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 47, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+.mobile_bg {
+  position: absolute;
+  z-index: 3;
+  top: 10px;
+  left: 10px;
+  border-radius: 50%;
+  border: 1px solid #0f0a;
+  background-color: #000;
+}
+
+@media (min-width: 501px) {
+  /* line 47, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+  .mobile_bg {
+    display: none;
+  }
+}
+
+/* line 59, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+.mobile_bg .mobile_menu {
+  padding: 2vw;
+  font-size: clamp(26px, 6vw, 52px);
+  font-weight: 800;
+  text-decoration: none;
+  color: #0f0;
+  cursor: pointer;
+  background-image: linear-gradient(90deg, #000 0%, #0f0 50%, #000 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* line 72, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 #about,
 #scs,
 #code {
@@ -1182,21 +1213,21 @@ body {
   box-shadow: inset 0px 0px 10px 2px rgba(0, 255, 0, 0.8);
 }
 
-/* line 64, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 88, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 #about h2,
 #scs h2,
 #code h2 {
   margin: 2vw 0px;
 }
 
-/* line 68, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 92, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 #about p,
 #scs p,
 #code p {
   margin: 1vw 0px;
 }
 
-/* line 72, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 96, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 #about > div,
 #scs > div,
 #code > div {
@@ -1208,7 +1239,7 @@ body {
   font-weight: 600;
 }
 
-/* line 80, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 104, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 #about > div pre,
 #scs > div pre,
 #code > div pre {
@@ -1216,14 +1247,14 @@ body {
   tab-size: 4;
 }
 
-/* line 86, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 110, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 #about > a,
 #scs > a,
 #code > a {
   width: 20vw;
 }
 
-/* line 90, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 114, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 #about a,
 #scs a,
 #code a {
@@ -1239,14 +1270,14 @@ body {
   color: #0f0;
 }
 
-/* line 102, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 126, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 #about a img,
 #scs a img,
 #code a img {
   width: 100%;
 }
 
-/* line 106, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 130, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 #about a > div,
 #scs a > div,
 #code a > div {
@@ -1256,14 +1287,14 @@ body {
   box-shadow: 0px 0px 2vw .5vw #0f0;
 }
 
-/* line 113, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 137, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 #about a:hover div,
 #scs a:hover div,
 #code a:hover div {
   box-shadow: 0px 0px 3vw .8vw #0f0;
 }
 
-/* line 119, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 143, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 .hide {
   visibility: hidden;
   top: 47.5%;
@@ -1272,7 +1303,7 @@ body {
   height: 5%;
 }
 
-/* line 127, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 151, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 .show {
   visibility: visible;
   top: 5%;
@@ -1281,7 +1312,7 @@ body {
   height: 90%;
 }
 
-/* line 135, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 159, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 .page_container {
   box-sizing: border-box;
   position: absolute;
@@ -1294,12 +1325,12 @@ body {
   flex-wrap: nowrap;
 }
 
-/* line 146, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 170, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 .page_container .left_menu_container {
   flex: 1 0 0;
 }
 
-/* line 150, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 174, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 .page_container .content_container {
   flex: 5 0 0;
 }

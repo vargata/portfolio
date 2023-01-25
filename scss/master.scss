@@ -30,7 +30,6 @@ body {
 	height: 100%;
 	overflow: hidden;
 	background-color: #000;
-	//background-image: url("../img/matrix_bg.png");
 }
 
 #hidden_overlay{	
@@ -43,6 +42,31 @@ body {
 	z-index: 2;
 	background-color: rgba(0, 255, 0, 0.1);
 	visibility: hidden;
+}
+
+.mobile_bg{
+	@media (min-width: 501px){
+		display: none;
+	}
+	position: absolute;
+	z-index: 3;
+	top: 10px;
+	left: 10px;
+	border-radius: 50%;
+	border: 1px solid #0f0a;
+	background-color: #000;
+	
+	.mobile_menu{
+		padding: 2vw;
+		font-size: clamp(26px, 6vw, 52px);
+		font-weight: 800;
+		text-decoration: none;
+		color: #0f0;
+		cursor: pointer;
+		background-image: linear-gradient(90deg, #000 0%, #0f0 50%, #000 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
 }
 
 #about,
