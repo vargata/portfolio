@@ -1,7 +1,7 @@
 const canvas = document.getElementById('background');
 const bg = canvas.getContext('2d');
 
-var MatrixFont = new FontFace("Matrix Code NFI", "url(../font/matrix code nfi.ttf)");
+const MatrixFont = new FontFace("Matrix Code NFI", "url(../font/matrix code nfi.ttf)");
 
 initwindow();
 
@@ -12,8 +12,8 @@ function matrix() {
 	bg.fillStyle = '#0a0';
 	
 	ypos.forEach((y, ind) => {
-		var text = String.fromCharCode(Math.random() * 128);
-		var x = ind * 20;
+		let text = String.fromCharCode(Math.random() * 128);
+		let x = ind * 20;
 		bg.fillText(text, x, y);
 		if (y > 100 + Math.random() * 10000)
 			ypos[ind] = 0;

@@ -237,7 +237,8 @@
 		}
 		
 		input[type="text"],
-		input[type="email"]{
+		input[type="email"],
+		input[type="tel"]{
 			padding: 1vh 2vw;
 			width: 100%;
 			font-size: clamp(14px, 4vw, 18px);

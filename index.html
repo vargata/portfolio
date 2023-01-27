@@ -150,7 +150,7 @@ and see how much they?ve covered in certain areas.</p>
 
 <h2>About Netmatters</h2>
 <pre>
->Established in 2008
+Established in 2008
 Norfolk's leading technology company
 Winner of the Princess Royal Training Award
 Winner of EDP Skills of Tomorrow Award
@@ -209,13 +209,14 @@ Operate to strict company values
 						<a href="tel:07868517309">+44 7868 517309</a><br />
 						<a href="mailto:vargatam@yahoo.com">vargatam@yahoo.com</a>
 					</div>
-					<form method="post" action="contact.php">
-						<input type="text" name="firstname" placeholder="First name" required="required" />
-						<input type="text" name="lastname" placeholder="Last name" required="required" />
-						<input type="email" name="email" placeholder="E-Mail" required="required" />
-						<input type="text" name="subject" placeholder="Subject" required="required" />
+					<form method="post" action="contact.php" onSubmit="validateForm(); return false;">
+						<input id="fname" type="text" name="firstname" placeholder="First name" required="required" />
+						<input id="lname"  type="text" name="lastname" placeholder="Last name" required="required" />
+						<input id="email" type="email" name="email" placeholder="E-Mail" required="required" />
+						<input id="phone"  type="tel" name="phone" placeholder="Phone number" />
+						<input id="subject" type="text" name="subject" placeholder="Subject" required="required" />
 						<textarea id="msg" name="message" placeholder="Message..." required="required" maxlength="500"></textarea>
-						<input type="submit" value="Submit" name="submit"/><label id="charcount">0/500</label>
+						<input id="submit" type="submit" value="Submit" name="submit"/><label id="charcount">0/500</label>
 					</form>
 				</div>
 				<div class="content_footer">
@@ -235,7 +236,8 @@ Operate to strict company values
 		<script src="js/charanim.js"></script>
 		<script src="js/titleanim.js"></script>
 		<script src="js/countchar.js"></script>
-		<script src="js/mobilemenu.js"></script>
+		<script src="js/mobilemenu.js"></script>		
+		<script src="js/validation.js"></script>
 		<script type="text/javascript">hljs.highlightAll();</script>
 	</body>
 </html>

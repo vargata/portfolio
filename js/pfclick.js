@@ -51,8 +51,8 @@ function clicked(e) {
 	} else {
 		e.currentTarget.classList.add("hiddenbutton");
 		e.currentTarget.style.zIndex = "0";
-		e.currentTarget.style.position = "static";
-		e.currentTarget.style.transform = "scale(100%) translate(0vw, 0vh)";
+		e.currentTarget.style.position = null;
+		e.currentTarget.style.transform = null;
 		document.getElementById("hidden_overlay").style.visibility = "hidden";
 		document.getElementById("content_overlay").style.visibility = "hidden";
 	}

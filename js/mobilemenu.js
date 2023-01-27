@@ -20,10 +20,10 @@ function flashing(){
 
 function showMenu(){
 	if(isOpen){
-		menu.style.display = "none";
-		menu.style.position = "static";
+		menu.style.display = null;
+		menu.style.position = null;
+		page.style.transform = null;
 		button.innerText = "\u232A\u232A\u232A";
-		page.style.transform = "translateX(0px)";
 		buttonbg.style.left = "10px";
 		isOpen = false;
 	}else{
