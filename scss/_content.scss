@@ -270,6 +270,31 @@
 			box-shadow: inset 0px 0px 5px 2px rgba(0, 255, 0, 0.8);
 		}
 		
+		.response_container{
+			padding: 10px 10px;
+			position: relative;
+			height: 5vh;
+			
+			#response{
+				padding: 10px 10px;
+				position: absolute;
+				bottom: 5vh;
+				left: 0px;
+				right: 0px;
+				
+				box-sizing: border-box;
+				display: block;
+				box-sizing: border-box;
+				border-radius: .5vw;
+				font-family: "Courier";
+				color: #0f0;
+				outline: none;
+				visibility: hidden;
+				background-color: rgba(0, 0, 0, 0.8);
+				box-shadow: inset 0px 0px 15px 2px rgba(255, 0, 0, 0.8);
+			}
+		}
+		
 		label{
 			float: right;
 		}

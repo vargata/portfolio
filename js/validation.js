@@ -1,28 +1,141 @@
 //const emailPattern = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+const regFName = /^[ \p{L}'-]*[\p{L}]$/u;
+const regLName = /^[\p{L}'][ \p{L}'-]*[\p{L}]$/u;
+const regGeneral = /^[\p{L}0-9-_(){}~#:'@*\/&^%$£"!]+[\p{L}0-9 -_(){}~#,.:;'@*\/&^%$£"!]*$/u;
+	
+const fname = document.querySelector('#fname');
+const lname = document.querySelector('#lname');
+const email = document.querySelector('#email');
+const phone = document.querySelector('#phone');
+const subject = document.querySelector('#subject');
+const msg = document.querySelector('#msg');
+const submit = document.querySelector('#submit');
+const responsemsg = document.querySelector('#response');
+
+const errfname = 1;
+const errlname = 2;
+const erremail = 4;
+const errphone = 8;
+const errsubject = 16;
+const errmsg = 32;
+
+let errorCode = 0;
+
+const response_fname = "\ninvalid first name";
+const response_lname = "\ninvalid last name";
+const response_email = "\ninvalid EMail address";
+const response_phone = "\ninvalid phone number";
+const response_subject = "\ninvalid subject";
+const response_msg = "\ninvalid message";
+
+fname.addEventListener('keyup', removeError);
+lname.addEventListener('keyup', removeError);
+email.addEventListener('keyup', removeError);
+phone.addEventListener('keyup', removeError);
+subject.addEventListener('keyup', removeError);
+msg.addEventListener('keyup', removeError);
+
+function removeError(e){
+	switch(e.currentTarget){
+		case fname:
+			if(errorCode & errfname)
+				errorCode ^= errfname;
+			break;
+		case lname:			
+			if(errorCode & errlname)
+				errorCode ^= errlname;
+			break;
+		case email:
+			if(errorCode & erremail)
+				errorCode ^= erremail;
+			break;
+		case phone:
+			if(errorCode & errphone)
+				errorCode ^= errphone;
+			break;
+		case subject:
+			if(errorCode & errsubject)
+				errorCode ^= errsubject;
+			break;
+		case msg:
+			if(errorCode & errmsg)
+				errorCode ^= errmsg;
+			break;
+	}
+	
+	showError();
+}
+
+function showError(){
+	if(errorCode > 0){
+		responsemsg.innerText = "There is an error:";
+		responsemsg.style.visibility = "visible";
+	} else {
+		responsemsg.style.visibility = "hidden";
+	}
+	
+	if(errorCode & errfname){
+		fname.style.boxShadow = "inset 0px 0px 15px 2px rgba(255, 0, 0, 0.8)";
+		responsemsg.innerText += response_fname;
+	} else{
+		fname.style.boxShadow = "inset 0px 0px 15px 2px rgba(0, 255, 0, 0.8)";
+	}
+	
+	if(errorCode & errlname){
+		lname.style.boxShadow = "inset 0px 0px 15px 2px rgba(255, 0, 0, 0.8)";
+		responsemsg.innerText += response_lname;
+	} else{
+		lname.style.boxShadow = "inset 0px 0px 15px 2px rgba(0, 255, 0, 0.8)";
+	}
+	
+	if(errorCode & erremail){
+		email.style.boxShadow = "inset 0px 0px 15px 2px rgba(255, 0, 0, 0.8)";
+		responsemsg.innerText += response_email;
+	} else{
+		email.style.boxShadow = "inset 0px 0px 15px 2px rgba(0, 255, 0, 0.8)";
+	}
+	
+	if(errorCode & errphone){
+		phone.style.boxShadow = "inset 0px 0px 15px 2px rgba(255, 0, 0, 0.8)";
+		responsemsg.innerText += response_phone;
+	} else{
+		phone.style.boxShadow = "inset 0px 0px 15px 2px rgba(0, 255, 0, 0.8)";
+	}
+	
+	if(errorCode & errsubject){
+		subject.style.boxShadow = "inset 0px 0px 15px 2px rgba(255, 0, 0, 0.8)";
+		responsemsg.innerText += response_subject;
+	} else{
+		subject.style.boxShadow = "inset 0px 0px 15px 2px rgba(0, 255, 0, 0.8)";
+	}
+	
+	if(errorCode & errmsg){
+		msg.style.boxShadow = "inset 0px 0px 15px 2px rgba(255, 0, 0, 0.8)";
+		responsemsg.innerText += response_msg;
+	} else{
+		msg.style.boxShadow = "inset 0px 0px 15px 2px rgba(0, 255, 0, 0.8)";
+	}
+}
 
 function validateForm(){
-	
-	const fname = document.querySelector('#fname');
-	const lname = document.querySelector('#lname');
-	const email = document.querySelector('#email');
-	const phone = document.querySelector('#phone');
-	const subject = document.querySelector('#subject');
-	const msg = document.querySelector('#msg');
-	const submit = document.querySelector('#submit');
 
 	function ecallback(response){	
 		let matches = response.match(/"deliverability":"([a-zA-Z]*)"/);
 	    if(matches[1] !== 'DELIVERABLE')
-			email.style.boxShadow = "inset 0px 0px 15px 2px rgba(255, 100, 100, 0.8)";
+			errorCode |= erremail;
+		
+		showError();
 		
 		if(phonenum !== "")
-			setTimeout(httpGetAsync, 1000, phoneurl, pcallback);
+			setTimeout(httpGetAsync, 1100, phoneurl, pcallback);
 	}
 	
 	function pcallback(response){
 		let matches = response.match(/"valid":([a-zA-Z]*)/);
 	    if(matches[1] !== 'true')
-			phone.style.boxShadow = "inset 0px 0px 15px 2px rgba(255, 100, 100, 0.8)";
+			errorCode |= errphone;
+		
+		showError();
 	}
 
 	function httpGetAsync(url, callback) {
@@ -49,5 +162,29 @@ function validateForm(){
 	
 	let phoneurl = "https://phonevalidation.abstractapi.com/v1/?api_key=83a5b70894184116ba83fed6d75a103c&phone=" + phonenum;
 
+	function validateNames(){
+		if(!regFName.test(fname.value)){
+			errorCode |= errfname;
+		}
+		if(!regLName.test(lname.value)){
+			errorCode |= errlname;
+		}
+		
+		showError();
+	}
+	
+	function validateGeneral(){
+		if(!regGeneral.test(subject.value)){
+			errorCode |= errsubject;
+		}		
+		if(!regGeneral.test(msg.value)){
+			errorCode |= errmsg;
+		}
+		
+		showError();
+	}
+	
+	validateNames();
+	validateGeneral();
 	//httpGetAsync(emailurl, ecallback);
 }
