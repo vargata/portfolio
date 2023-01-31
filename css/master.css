@@ -885,7 +885,6 @@
 .content_container .contact_form form > * {
   box-sizing: border-box;
   display: block;
-  box-sizing: border-box;
   border-radius: .5vw;
   font-family: "Courier";
   color: #0f0;
@@ -893,22 +892,22 @@
   background-color: rgba(0, 255, 0, 0.1);
 }
 
-/* line 226, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+/* line 225, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .contact_form form > *::placeholder {
   color: rgba(0, 255, 0, 0.6);
 }
 
-/* line 230, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+/* line 229, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .contact_form form > *:focus::placeholder {
   color: transparent;
 }
 
-/* line 234, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+/* line 233, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .contact_form form > *:hover {
   background-color: rgba(0, 255, 0, 0.2);
 }
 
-/* line 239, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+/* line 247, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .contact_form input[type="text"],
 .content_container .contact_form input[type="email"],
 .content_container .contact_form input[type="tel"] {
@@ -921,7 +920,7 @@
   box-shadow: inset 0px 0px 5px 2px rgba(0, 255, 0, 0.8);
 }
 
-/* line 251, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+/* line 259, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .contact_form textarea {
   resize: none;
   padding: 2vh 2vw;
@@ -934,7 +933,7 @@
   box-shadow: inset 0px 0px 5px 2px rgba(0, 255, 0, 0.8);
 }
 
-/* line 263, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+/* line 271, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .contact_form input[type="submit"] {
   width: 40%;
   display: inline-block;
@@ -945,14 +944,14 @@
   box-shadow: inset 0px 0px 5px 2px rgba(0, 255, 0, 0.8);
 }
 
-/* line 273, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+/* line 281, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .contact_form .response_container {
   padding: 10px 10px;
   position: relative;
   height: 5vh;
 }
 
-/* line 278, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+/* line 286, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .contact_form .response_container #response {
   padding: 10px 10px;
   position: absolute;
@@ -971,12 +970,12 @@
   box-shadow: inset 0px 0px 15px 2px rgba(255, 0, 0, 0.8);
 }
 
-/* line 298, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+/* line 306, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .contact_form label {
   float: right;
 }
 
-/* line 303, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+/* line 311, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .content_footer {
   display: flex;
   flex-direction: row;
@@ -989,7 +988,7 @@
   color: #0f0;
 }
 
-/* line 314, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+/* line 322, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .content_footer .socialmedia_footer {
   display: none;
   flex-direction: row;
@@ -998,20 +997,20 @@
 }
 
 @media (max-width: 500px) {
-  /* line 314, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+  /* line 322, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
   .content_container .content_footer .socialmedia_footer {
     display: inline-flex;
     margin-left: auto;
   }
 }
 
-/* line 327, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+/* line 335, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .content_footer .socialmedia_footer a:nth-child(2) img {
   background-color: rgba(0, 255, 0, 0.7);
   border-radius: 45%;
 }
 
-/* line 333, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+/* line 341, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .content_footer .socialmedia_footer a {
   flex: 1 0 0;
   display: block;
@@ -1019,14 +1018,14 @@
   min-width: 24px;
 }
 
-/* line 339, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+/* line 347, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .content_footer .socialmedia_footer a img {
   min-width: 20px;
   width: 8vw;
   transition: all 1s;
 }
 
-/* line 344, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
+/* line 352, ../../../../xampp/htdocs/portfolio/scss/_content.scss */
 .content_container .content_footer .socialmedia_footer a img:hover {
   min-width: 24px;
   width: 10vw;

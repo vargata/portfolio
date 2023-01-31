@@ -1,8 +1,8 @@
 //const emailPattern = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-const regFName = /^[ \p{L}'-]*[\p{L}]$/u;
-const regLName = /^[\p{L}'][ \p{L}'-]*[\p{L}]$/u;
+const regFName = /^(?=(\p{Lu}))(?! )(?!.*  .*)[\p{L}' -]*[\p{L}'-]$/u;
+const regLName = /^(?! )(?!.*  .*)[\p{Lu}][\p{L}' -]*[\p{L}'-]$/u;
 const regGeneral = /^[\p{L}0-9-_(){}~#:'@*\/&^%$£"!]+[\p{L}0-9 -_(){}~#,.:;'@*\/&^%$£"!]*$/u;
-	
+
 const fname = document.querySelector('#fname');
 const lname = document.querySelector('#lname');
 const email = document.querySelector('#email');

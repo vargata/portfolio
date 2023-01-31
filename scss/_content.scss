@@ -216,7 +216,6 @@
 		form>*{
 			box-sizing: border-box;
 			display: block;
-			box-sizing: border-box;
 			border-radius: .5vw;
 			font-family: "Courier";
 			color: #0f0;
@@ -234,6 +233,15 @@
 			&:hover{
 				background-color: rgba(0, 255, 0, 0.2);
 			}
+		}
+		
+		#hfname,
+		#hlname,
+		#hemail,
+		#hphone,
+		#hsubject,
+		#hmsg{
+			//visibility: hidden;
 		}
 		
 		input[type="text"],
