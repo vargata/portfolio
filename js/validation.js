@@ -3,6 +3,18 @@ const regFName = /^(?=(\p{Lu}))(?! )(?!.*  .*)[\p{L}' -]*[\p{L}'-]$/u;
 const regLName = /^(?! )(?!.*  .*)[\p{Lu}][\p{L}' -]*[\p{L}'-]$/u;
 const regGeneral = /^[\p{L}0-9-_(){}~#:'@*\/&^%$£"!]+[\p{L}0-9 -_(){}~#,.:;'@*\/&^%$£"!]*$/u;
 
+let apiEnabled = false;
+
+const apiSwitch = document.querySelector('.leftmenu_header');
+apiSwitch.addEventListener('click', (e) => {
+		apiEnabled = !apiEnabled;
+		
+		if(apiEnabled)
+			apiSwitch.style.boxShadow = "inset 0px 0px 15px 2px rgba(255, 0, 0, 0.8)";
+		else
+			apiSwitch.style.boxShadow = null;
+});
+
 const fname = document.querySelector('#fname');
 const lname = document.querySelector('#lname');
 const email = document.querySelector('#email');
@@ -186,5 +198,6 @@ function validateForm(){
 	
 	validateNames();
 	validateGeneral();
-	//httpGetAsync(emailurl, ecallback);
+	if(apiEnabled)
+		httpGetAsync(emailurl, ecallback);
 }
