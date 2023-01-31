@@ -1193,6 +1193,7 @@ body {
 /* line 47, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 .mobile_bg {
   position: absolute;
+  text-decoration: none;
   z-index: 3;
   top: 10px;
   left: 10px;
@@ -1208,12 +1209,11 @@ body {
   }
 }
 
-/* line 59, ../../../../xampp/htdocs/portfolio/scss/master.scss */
+/* line 60, ../../../../xampp/htdocs/portfolio/scss/master.scss */
 .mobile_bg .mobile_menu {
   padding: 2vw;
   font-size: clamp(26px, 6vw, 52px);
   font-weight: 800;
-  text-decoration: none;
   color: #0f0;
   cursor: pointer;
   background-image: linear-gradient(90deg, #000 0%, #0f0 50%, #000 100%);

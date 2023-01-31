@@ -82,6 +82,7 @@ function showError(){
 	if(errorCode > 0){
 		responsemsg.innerText = "There is an error:";
 		responsemsg.style.visibility = "visible";
+		responsemsg.style.boxShadow = "inset 0px 0px 15px 2px rgba(255, 0, 0, 0.8)";
 	} else {
 		responsemsg.style.visibility = "hidden";
 	}
@@ -127,16 +128,21 @@ function showError(){
 	} else{
 		msg.style.boxShadow = "inset 0px 0px 15px 2px rgba(0, 255, 0, 0.8)";
 	}
+	
+	return errorCode;
 }
 
 function validateForm(){
+	
+	let success = true;
 
 	function ecallback(response){	
 		let matches = response.match(/"deliverability":"([a-zA-Z]*)"/);
 	    if(matches[1] !== 'DELIVERABLE')
 			errorCode |= erremail;
 		
-		showError();
+		if(showError())
+			success = false;
 		
 		if(phonenum !== "")
 			setTimeout(httpGetAsync, 1100, phoneurl, pcallback);
@@ -147,7 +153,8 @@ function validateForm(){
 	    if(matches[1] !== 'true')
 			errorCode |= errphone;
 		
-		showError();
+		if(showError())
+			success = false;
 	}
 
 	function httpGetAsync(url, callback) {
@@ -182,7 +189,8 @@ function validateForm(){
 			errorCode |= errlname;
 		}
 		
-		showError();
+		if(showError())
+			success = false;
 	}
 	
 	function validateGeneral(){
@@ -193,11 +201,18 @@ function validateForm(){
 			errorCode |= errmsg;
 		}
 		
-		showError();
+		if(showError())
+			success = false;
 	}
 	
 	validateNames();
 	validateGeneral();
 	if(apiEnabled)
 		httpGetAsync(emailurl, ecallback);
+		
+	if(success){
+		responsemsg.innerText = "Message sent successfully";
+		responsemsg.style.boxShadow = "inset 0px 0px 15px 2px rgba(0, 255, 0, 0.8)";
+		responsemsg.style.visibility = "visible";
+	}
 }
