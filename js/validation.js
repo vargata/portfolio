@@ -78,6 +78,14 @@ function removeError(e){
 	showError();
 }
 
+function showSuccess(success){
+	if(success){
+		responsemsg.innerText = "Message sent successfully";
+		responsemsg.style.boxShadow = "inset 0px 0px 15px 2px rgba(0, 255, 0, 0.8)";
+		responsemsg.style.visibility = "visible";
+	}
+}
+
 function showError(){
 	if(errorCode > 0){
 		responsemsg.innerText = "There is an error:";
@@ -137,24 +145,28 @@ function validateForm(){
 	let success = true;
 
 	function ecallback(response){	
-		let matches = response.match(/"deliverability":"([a-zA-Z]*)"/);
-	    if(matches[1] !== 'DELIVERABLE')
+		let mailObj = JSON.parse(response);
+	    if(mailObj['deliverability'] !== 'DELIVERABLE')
 			errorCode |= erremail;
 		
 		if(showError())
 			success = false;
+			
+		showSuccess(success);
 		
 		if(phonenum !== "")
 			setTimeout(httpGetAsync, 1100, phoneurl, pcallback);
 	}
 	
 	function pcallback(response){
-		let matches = response.match(/"valid":([a-zA-Z]*)/);
-	    if(matches[1] !== 'true')
+		let phoneObj = JSON.parse(response);
+	    if(phoneObj['valid'] !== true)
 			errorCode |= errphone;
 		
 		if(showError())
 			success = false;
+			
+		showSuccess(success);
 	}
 
 	function httpGetAsync(url, callback) {
@@ -210,9 +222,5 @@ function validateForm(){
 	if(apiEnabled)
 		httpGetAsync(emailurl, ecallback);
 		
-	if(success){
-		responsemsg.innerText = "Message sent successfully";
-		responsemsg.style.boxShadow = "inset 0px 0px 15px 2px rgba(0, 255, 0, 0.8)";
-		responsemsg.style.visibility = "visible";
-	}
+	showSuccess(success);
 }
