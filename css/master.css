@@ -356,7 +356,7 @@
   height: 100%;
   border-radius: 4vw;
   transition: all 1s;
-  background: no-repeat center/cover url("../img/underconstruction.png"), radial-gradient(rgba(0, 0, 0, 0.4) 60%, rgba(255, 255, 255, 0.8));
+  background: no-repeat center/cover url("../img/jsarray.png"), radial-gradient(rgba(0, 0, 0, 0.4) 60%, rgba(255, 255, 255, 0.8));
   background-blend-mode: difference;
   cursor: pointer;
 }
