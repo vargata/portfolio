@@ -22,6 +22,29 @@
 		</div>
 		<div id="code" class="hide">
 			<div>
+			
+SQL example to show the use of subqueries through
+retrieving my youths best movies from a movies database
+
+<pre><code class="language-sql">
+SELECT 	r.mov_title AS "The movie",
+		r.mov_year AS "released in",
+        actor.act_fname AS "starred",
+        actor.act_lname AS "by",
+        movie_cast.role AS "in the role of",
+        r.rev_stars AS "got stars (out of 10)"
+FROM
+	(SELECT m.mov_id, m.mov_title, m.mov_year, m.rev_stars FROM
+        (SELECT movie.mov_id, movie.mov_title, movie.mov_year, rating.rev_stars FROM movie
+			INNER JOIN rating
+         	ON rating.mov_id = movie.mov_id
+         	WHERE mov_year BETWEEN 1980 AND 2000) AS m
+        WHERE m.rev_stars > 8) AS r
+INNER JOIN movie_cast ON r.mov_id = movie_cast.mov_id
+INNER JOIN actor ON actor.act_id = movie_cast.act_id
+ORDER BY r.mov_year;
+</code></pre>
+
 CSS coding example to style this very popup window,
 positioning it above the rest of the page elements,
 setting up transition delay and with a little trick, creating
@@ -197,7 +220,7 @@ Operate to strict company values
 				<div id="portfolio" class="content">
 					<div class="content1"><span id="content1"><a href="https://vargata.github.io/netmatters/index.html" title="NetMatters website clone" target="_blank">FIND&nbsp;OUT&nbsp;MORE</a></span></div>
 					<div class="content2"><span id="content2"><a href="https://vargata.github.io/JS-Array/index.html" title="JS-Array reflection" target="_blank">FIND&nbsp;OUT&nbsp;MORE</a></span></div>
-					<div class="content3"><span id="content3"><a href="#" title="Coming Soon" target="_blank">FIND&nbsp;OUT&nbsp;MORE</a></span></div>
+					<div class="content3"><span id="content3"><a href="https://vargata.github.io/bestmovies/index.html" title="SQL challenge" target="_blank">FIND&nbsp;OUT&nbsp;MORE</a></span></div>
 					<div class="content4"><span id="content4"><a href="#" title="Coming Soon" target="_blank">FIND&nbsp;OUT&nbsp;MORE</a></span></div>
 					<div class="content5"><span id="content5"><a href="#" title="Coming Soon" target="_blank">FIND&nbsp;OUT&nbsp;MORE</a></span></div>
 					<div class="content6"><span id="content6"><a href="#" title="Coming Soon" target="_blank">FIND&nbsp;OUT&nbsp;MORE</a></span></div>
