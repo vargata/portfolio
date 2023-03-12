@@ -1,0 +1,80 @@
+//this code generates my entire website, including the
+//input fields in the contact form
+
+//creating input element
+
+$email = new input("email", form_input_type::EMAIL);{
+	$email->required = true;
+	$email->setMinMaxLen(4, 50);
+	$email->addClass("input");
+	$email->setPlaceholder("EMail address *");
+	$email->addEvent(form_events::FOCUS, "style.border = '2px solid #00fa';");
+	$email->addEvent(form_events::BLUR, "style.border = null;");
+}
+
+//populating the input field from database
+
+$db = new db("localhost", "contact_user", "contactpwd", "db_portfolio");
+$users = array();
+if($db->connect_db()){
+    $db->add_query("getUsers", "SELECT * FROM tbl_contacts");
+    $users = $db->get_Data("getUsers");
+    $db->close_db();
+}
+
+foreach ($users as $user){
+    $email->addElement($user["contact_email"]);
+}
+
+//snippet from the input class that creates the final HTML string
+
+class input extends global_attr{
+.
+.
+.
+
+	function getHtml(){
+		$space = "";
+		for($i = 0;  $i < $this->level; $i++)
+			$space .= "\t";
+
+		$input = $space . "<input"
+			.(($this->type) ? " type='" . $this->type . "'" : "")
+			.(($this->alt) ? " alt='" . $this->alt . "'" : "")
+			.(($this->src) ? " src='" . $this->src . "'" : "")
+			.(($this->value) ? " value='" . $this->value . "'" : "")
+			.(($this->parent) ? " form='" . $this->parent . "'" : "")
+			.(($this->readonly) ? " readonly='readonly'" : "")
+			.(($this->disabled) ? " disabled='disabled'" : "")
+			.(($this->checked) ? " checked='checked'" : "")
+			.(($this->size) ? " size='" . $this->size . "'" : "")
+			.(($this->width) ? " width='" . $this->width . "'" : "")
+			.(($this->height) ? " height='" . $this->height . "'" : "")
+			.(($this->minlen) ? " minlength='" . $this->minlen . "'" : "")
+			.(($this->maxlen) ? " maxlength='" . $this->maxlen . "'" : "")
+			.(($this->min) ? " min='" . $this->min . "'" : "")
+			.(($this->max) ? " max='" . $this->max . "'" : "")
+			.(($this->step) ? " step='" . $this->step . "'" : "")
+			.(($this->datalist) ? " list='" . $this->getId() . "_list'" : "")
+			.(($this->multiple) ? " multiple='multiple'" : "")
+			.(($this->required) ? " required='required'" : "")
+			.(($this->focused) ? " autofocus='autofocus'" : "")
+			.((isset($this->autocomplete)) ? (($this->autocomplete) ? " autocomplete='on'" : " autocomplete='off'") : "")
+			.(($this->pattern) ? " pattern='" . $this->pattern . "'" : "")
+			.(($this->placeholder) ? " placeholder='" . $this->placeholder . "'" : "")
+			.(($this->output) ? " oninput='" . $this->getId() . "_output.value=value'" : "")
+
+			.$this->getAttributes()
+
+			.(($this->fileformats) ? " accept='" . $this->getFormats() ."'" : "")
+
+			."/>"
+
+			.(($this->output) ? $this->output->getHtml() : "")
+
+			.(($this->datalist) ? $this->datalist->getHtml() : "");
+
+		return $input;
+	}
+
+}

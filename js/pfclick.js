@@ -47,14 +47,12 @@ function clicked(e) {
 		e.currentTarget.style.position = "absolute";
 		e.currentTarget.style.transform = "scale("+scale+"%) translate("+horz+"vw, "+vert+"vh)";
 		document.getElementById("hidden_overlay").style.visibility = "visible";
-		document.getElementById("content_overlay").style.visibility = "visible";
 	} else {
 		e.currentTarget.classList.add("hiddenbutton");
 		e.currentTarget.style.zIndex = "0";
 		e.currentTarget.style.position = null;
 		e.currentTarget.style.transform = null;
 		document.getElementById("hidden_overlay").style.visibility = "hidden";
-		document.getElementById("content_overlay").style.visibility = "hidden";
 	}
 }		
 
