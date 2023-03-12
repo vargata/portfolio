@@ -77,26 +77,15 @@ require_once 'db.php';
             unset($trash);
         }
         
-        if(isset($_POST["marketing"]))
-            $marketing = array_pop($params);
-        
-        $db = new db("localhost", "contact_user", "contactpwd", "db_portfolio");
+        if($_SERVER["HTTP_HOST"] == "localhost")
+            $db = new db("localhost", "contact_user", "contactpwd", "db_portfolio");
+        else
+            $db = new db("138.68.136.139", "tamasvar_contact_user", "dU91Sc&Y0E5J", "tamasvar_db_portfolio");
+                
         if($db->connect_db()){
-        
-            if(isset($marketing)){
-                $db->add_query("saveMarketing", "CALL saveMarketing(?, ?)");
-                $db->add_params("saveMarketing", "ss", array($params["name"], $params["email"]));
-                if($db->save_Data("saveMarketing")){
-                    array_push($return, 'Marketing preferences saved.');
-                    $return["success"] = true;
-                } else{
-                    array_push($return, 'Database error! Please try again later');
-                    $return["success"] = false;
-                }
-            }
             
             $db->add_query("saveEnquiry", "CALL saveEnquiry(?, ?, ?, ?, ?, ?, @cId)");
-            $db->add_params("saveEnquiry", "ssssss", $params);
+            $db->add_params("saveEnquiry", "ssssis", $params);
             if($db->save_Data("saveEnquiry")){
                 array_push($return, 'Message sent successfully.');
                 $return["success"] = true;
