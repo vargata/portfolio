@@ -12,8 +12,8 @@ class form extends global_attr{
     private $target = null;
     private $charsets = array();
     private $enctype = null;
-    public bool $autocomplete = true;
-    public bool $novalidate = false;
+    public $autocomplete = true;
+    public $novalidate = false;
     
     function setLevel($level){
         $this->level = $level;

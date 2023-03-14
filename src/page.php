@@ -67,8 +67,8 @@ class head{
     public $title = null;
     public $base = null;
     public $target = null;
-    public array $links = array();
-    public array $scripts = array();
+    public $links = array();
+    public $scripts = array();
     private $level = 0;
     
     function __construct($title_text){
@@ -100,8 +100,8 @@ class head{
 
 class body{
     private $content = null;
-    public array $scripts = array();
-    public array $commands = array();
+    public $scripts = array();
+    public $commands = array();
     private $level = 0;
     
     function __construct(){
