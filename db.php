@@ -1,7 +1,17 @@
 <?php
 
 class db
-{    
+{
+    private const db_host = "localhost";
+    private const db_user = "contact_user";
+    private const db_pwd = "contactpwd";
+    private const db_name = "db_portfolio";
+    
+    private const db_host_remote = "138.68.136.139";
+    private const db_user_remote = "tamasvar_contact_user";
+    private const db_pwd_remote = "dU91Sc&Y0E5J";
+    private const db_name_remote = "tamasvar_db_portfolio";
+    
     private $conn;
     
     private $db_host;
@@ -12,11 +22,18 @@ class db
     private $sql_list = array();
     private $param_list = array();
     
-    function __construct($db_host, $db_user, $db_pwd, $db_name){
-        $this->db_host = $db_host;
-        $this->db_user = $db_user;
-        $this->db_pwd = $db_pwd;
-        $this->db_name = $db_name;
+    function __construct(){
+        if($_SERVER["HTTP_HOST"] == "localhost"){
+            $this->db_host = db_host;
+            $this->db_user = db_user;
+            $this->db_pwd = db_pwd;
+            $this->db_name = db_name;
+        } else {
+            $this->db_host = db_host_remote;
+            $this->db_user = db_user_remote;
+            $this->db_pwd = db_pwd_remote;
+            $this->db_name = db_name_remote;
+        }
     }
     
     function add_query($sql_name, $sql){

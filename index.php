@@ -50,12 +50,9 @@
     );
     
     //fetching subjects from database
-    
-    if($_SERVER["HTTP_HOST"] == "localhost")
-        $db = new db("localhost", "contact_user", "contactpwd", "db_portfolio");
-    else
-        $db = new db("138.68.136.139", "tamasvar_contact_user", "dU91Sc&Y0E5J", "tamasvar_db_portfolio");
-    
+   
+    $db = new db();
+   
     $subjects = array();
     if($db->connect_db()){
         $db->add_query("getSubjects", "SELECT * FROM tbl_subjects");

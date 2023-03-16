@@ -77,10 +77,7 @@ require_once 'db.php';
             unset($trash);
         }
         
-        if($_SERVER["HTTP_HOST"] == "localhost")
-            $db = new db("localhost", "contact_user", "contactpwd", "db_portfolio");
-        else
-            $db = new db("138.68.136.139", "tamasvar_contact_user", "dU91Sc&Y0E5J", "tamasvar_db_portfolio");
+        $db = new db();
                 
         if($db->connect_db()){
             
