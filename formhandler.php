@@ -99,8 +99,12 @@ require_once 'db.php';
     }
     
     foreach($return as $key =>$value){
-        if($key != "success")
-            echo "<label class='msglabel'>".$value."</label>".PHP_EOL;
+        if($key != "success"){
+            $label = new label();
+            $label->addClass("msglabel");
+            $label->addContent(new text($value));
+            echo $label->getHtml();
+        }
     }
     
 ?>

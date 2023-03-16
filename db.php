@@ -1,17 +1,17 @@
 <?php
 
+const db_host_local = "localhost";
+const db_user_local = "contact_user";
+const db_pwd_local = "contactpwd";
+const db_name_local = "db_portfolio";
+
+const db_host_remote = "138.68.136.139";
+const db_user_remote = "tamasvar_contact_user";
+const db_pwd_remote = "dU91Sc&Y0E5J";
+const db_name_remote = "tamasvar_db_portfolio";
+
 class db
-{
-    private const db_host = "localhost";
-    private const db_user = "contact_user";
-    private const db_pwd = "contactpwd";
-    private const db_name = "db_portfolio";
-    
-    private const db_host_remote = "138.68.136.139";
-    private const db_user_remote = "tamasvar_contact_user";
-    private const db_pwd_remote = "dU91Sc&Y0E5J";
-    private const db_name_remote = "tamasvar_db_portfolio";
-    
+{    
     private $conn;
     
     private $db_host;
@@ -24,10 +24,10 @@ class db
     
     function __construct(){
         if($_SERVER["HTTP_HOST"] == "localhost"){
-            $this->db_host = db_host;
-            $this->db_user = db_user;
-            $this->db_pwd = db_pwd;
-            $this->db_name = db_name;
+            $this->db_host = db_host_local;
+            $this->db_user = db_user_local;
+            $this->db_pwd = db_pwd_local;
+            $this->db_name = db_name_local;
         } else {
             $this->db_host = db_host_remote;
             $this->db_user = db_user_remote;
