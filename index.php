@@ -55,7 +55,7 @@
    
     $subjects = array();
     if($db->connect_db()){
-        $db->add_query("getSubjects", "SELECT * FROM tbl_subjects");
+        $db->add_query("getSubjects", "CALL getSubjects()");
         $subjects = $db->get_Data("getSubjects");
         $db->close_db();
     }

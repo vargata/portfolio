@@ -1,3 +1,9 @@
+@import 'leftmenu';
+@import 'content';
+@import 'declarations';
+@import 'hljs.scss';
+@import 'scrollbar';
+
 @font-face {
   font-family: "MatrixFont";
   src: url('../font/matrix code nfi.ttf'),
@@ -169,9 +175,3 @@ body {
 		flex: 5 0 0;
 	}
 }
-
-@import 'leftmenu';
-@import 'content';
-@import 'declarations';
-@import 'hljs.scss';
-@import 'scrollbar';

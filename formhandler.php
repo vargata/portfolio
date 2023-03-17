@@ -98,13 +98,15 @@ require_once 'db.php';
         }
     }
     
+    $div = new div();
     foreach($return as $key =>$value){
-        if($key != "success"){
+        if($key !== "success"){
             $label = new label();
             $label->addClass("msglabel");
             $label->addContent(new text($value));
-            echo $label->getHtml();
+            $div->addContent(clone $label);
         }
     }
+    echo $div->getHtml();
     
 ?>
