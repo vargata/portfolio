@@ -1,0 +1,21 @@
+html{
+	background-color: lightgrey;
+}
+#table{
+	margin: auto;
+	width: 100%;
+}
+
+#table #row{
+	width: 100%;
+	display: flex;
+	justify-items: space-between;
+}
+
+#table #row #cell{
+	width: 15%;
+	padding: 10px;
+	display: inline-block;
+	background-color: lightblue;
+	word-wrap: break-word;	
+}
