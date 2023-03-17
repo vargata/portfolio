@@ -1,18 +1,19 @@
 html{
 	background-color: lightgrey;
 }
-#table{
+
+.table{
 	margin: auto;
 	width: 100%;
 }
 
-#table #row{
+.table .row{
 	width: 100%;
 	display: flex;
 	justify-items: space-between;
 }
 
-#table #row #cell{
+.table .row .cell{
 	width: 15%;
 	padding: 10px;
 	display: inline-block;

@@ -27,13 +27,13 @@
             $page->addStylesheet("./css/checkMessages.css");
             
             $table = new div();
-            $table->setId("table");
+            $table->addClass("table");
             
             $row = new div();
-            $row->setId("row");
+            $row->addClass("row");
             foreach ($messages["row0"] as $name => $value){
                 $cell = new div();
-                $cell->setId("cell");
+                $cell->addClass("cell");
                 $cell->addContent(new text($name));
                 $row->addContent(clone $cell);
             }
@@ -41,10 +41,10 @@
             
             foreach ($messages as $data){
                 $row = new div();
-                $row->setId("row");
+                $row->addClass("row");
                 foreach ($data as $value){
                     $cell = new div();
-                    $cell->setId("cell");
+                    $cell->addClass("cell");
                     $cell->addContent(new text($value));
                     $row->addContent(clone $cell);
                 }
