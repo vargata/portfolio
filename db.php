@@ -5,16 +5,6 @@ const db_user_local = "contact_user";
 const db_pwd_local = "contactpwd";
 const db_name_local = "db_portfolio";
 
-//const db_host_remote = "138.68.136.139";
-//const db_user_remote = "tamasvar_contact_user";
-//const db_pwd_remote = "dU91Sc&Y0E5J";
-//const db_name_remote = "tamasvar_db_portfolio";
-
-const db_host_remote = "localhost";
-const db_user_remote = "id20442769_contact_user";
-const db_pwd_remote = "dU91Sc&Y0E5J";
-const db_name_remote = "id20442769_db_portfolio";
-
 class db
 {    
     private $conn;
